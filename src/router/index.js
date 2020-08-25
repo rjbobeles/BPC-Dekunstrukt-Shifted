@@ -1,6 +1,11 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+
+// Views
 import Home from "../views/Home.vue";
+
+// Styles
+import "@/assets/css/style.scss";
 
 Vue.use(VueRouter);
 
@@ -11,13 +16,36 @@ const routes = [
     component: Home
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    path: "/acknowledgement",
+    name: "Acknowledgement",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+      import(
+        /* webpackChunkName: "acknowledgement" */ "../views/Acknowledgement.vue"
+      )
+  },
+  {
+    path: "/entries",
+    name: "Entries",
+    component: () =>
+      import(/* webpackChunkName: "entries" */ "../views/Entries.vue")
+  },
+  {
+    path: "/editors-note",
+    name: "Editor's Note",
+    component: () =>
+      import(/* webpackChunkName: "editorsnote" */ "../views/EditorsNote.vue")
+  },
+  {
+    path: "/staffbox",
+    name: "Staffbox",
+    component: () =>
+      import(/* webpackChunkName: "staffbox" */ "../views/Staffbox.vue")
+  },
+  {
+    path: "/contributors",
+    name: "Contributors",
+    component: () =>
+      import(/* webpackChunkName: "contributors" */ "../views/Contributors.vue")
   }
 ];
 
