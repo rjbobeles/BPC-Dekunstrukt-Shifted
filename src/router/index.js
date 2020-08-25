@@ -5,7 +5,8 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 
 // Styles
-import "@/assets/css/style.scss";
+import "@/assets/tailwind/tailwind.css";
+import "@/assets/scss/style.scss";
 
 Vue.use(VueRouter);
 

@@ -1,0 +1,33 @@
+@mixin font($font-family, $font-file) {
+    @font-face {
+      font-family: $font-family;
+      src:  url($font-file+'.woff') format('woff');
+      src:  url($font-file+'.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal; 
+    }
+    .#{$font-family} {
+      font-family: $font-family; 
+    }
+  }
+  
+  @include font('chivo-black',                            '../../assets/fonts/Chivo-Black'                   );
+  @include font('chivo-blackitalic',                      '../../assets/fonts/Chivo-BlackItalic'             );
+  @include font('chivo-bold',                             '../../assets/fonts/Chivo-Bold'                    );
+  @include font('chivo-bolditalic',                       '../../assets/fonts/Chivo-BoldItalic'              );
+  @include font('chivo-italic',                           '../../assets/fonts/Chivo-Italic'                  );
+  @include font('chivo-light',                            '../../assets/fonts/Chivo-Light'                   );
+  @include font('chivo-lightitalic',                      '../../assets/fonts/Chivo-LightItalic'             );
+  @include font('chivo-regular',                          '../../assets/fonts/Chivo-Regular'                 );
+  
+  @include font('minionpro-bold',                         '../../assets/fonts/MinionPro-Bold'                );
+  @include font('minionpro-boldcn',                       '../../assets/fonts/MinionPro-BoldCn'              );
+  @include font('minionpro-bold-italic',                  '../../assets/fonts/MinionPro-BoldCnIt'            );
+  @include font('minionpro-bold-italic',                  '../../assets/fonts/MinionPro-BoldIt'              );
+  @include font('minionpro-italic',                       '../../assets/fonts/MinionPro-It'                  );
+  @include font('minionpro-medium-italic',                '../../assets/fonts/MinionPro-MediumIt'            );
+  @include font('minionpro-regular',                      '../../assets/fonts/MinionPro-Regular'             );
+  @include font('minionpro-semibold',                     '../../assets/fonts/MinionPro-Semibold'            );
+  @include font('minionpro-semibold-italic',              '../../assets/fonts/MinionPro-SemiboldIt'          ); 
+  
+  
