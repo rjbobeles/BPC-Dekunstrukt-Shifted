@@ -2,10 +2,11 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import lax from "lax.js";
+import VueSmoothScroll from "vue2-smooth-scroll";
 
 Vue.config.productionTip = false;
 Vue.prototype.$lax = lax;
-Vue.prototype.$test = "Hello World";
+Vue.use(VueSmoothScroll);
 
 new Vue({
   router,
