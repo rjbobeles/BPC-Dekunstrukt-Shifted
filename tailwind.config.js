@@ -20,6 +20,13 @@ module.exports = {
       "screen-1/2": "50vh",
       "screen-3/4": "75vh",
     },
+    colors: {
+      gritty: "#0c0c0c",
+      mango: "#FEB51A",
+      ash: "#FCFCFC",
+      black: "#000000",
+      white: "#FFFFFF",
+    },
   },
   variants: {},
   plugins: [],
