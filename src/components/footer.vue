@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-black flex items-center" style="min-height: 40vh">
+  <div class="bg-gritty flex items-center" style="min-height: 40vh">
     <div class="container mx-auto flex flex-col md:flex-row py-10 pl-8 xl:pl-0">
       <div
         class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/2 flex justify-center items-center mb-8 md:md-0"
