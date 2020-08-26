@@ -26,7 +26,7 @@
           2/F Br. Miguel Febres Cordero Building, <br />
           Taft Campus, De La Salle-College of Saint <br />
           Benilde, Taft Avenue, Manila, Philippines
-          <div class="mt-5 ">
+          <div class="mt-5">
             <a href="https://facebook.com/TheBenildean">
               <img
                 src="../assets/images/icons/fb.png"
@@ -38,7 +38,7 @@
               <img
                 src="../assets/images/icons/twt.png"
                 width="20px"
-                class="inline-block mx-1 "
+                class="inline-block mx-1"
               />
             </a>
             <a href="https://instagram.com/TheBenildean">

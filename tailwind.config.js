@@ -7,10 +7,10 @@
 module.exports = {
   theme: {
     container: {
-      center: true
+      center: true,
     },
     minHeight: {
-      "0": "0",
+      0: "0",
       "1/4": "25%",
       "1/2": "50%",
       "3/4": "75%",
@@ -18,14 +18,17 @@ module.exports = {
       screen: "100vh",
       "screen-1/4": "25vh",
       "screen-1/2": "50vh",
-      "screen-3/4": "75vh"
-    }
+      "screen-3/4": "75vh",
+    },
   },
   variants: {},
   plugins: [],
   purge: {
     // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
     enabled: process.env.NODE_ENV === "production",
-    content: ["components/**/*.vue", "views/**/*.vue"]
-  }
+    content: ["components/**/*.vue", "views/**/*.vue"],
+  },
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
 };

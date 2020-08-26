@@ -14,7 +14,7 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home
+    component: Home,
   },
   {
     path: "/acknowledgement",
@@ -22,38 +22,40 @@ const routes = [
     component: () =>
       import(
         /* webpackChunkName: "acknowledgement" */ "../views/Acknowledgement.vue"
-      )
+      ),
   },
   {
     path: "/entries",
     name: "Entries",
     component: () =>
-      import(/* webpackChunkName: "entries" */ "../views/Entries.vue")
+      import(/* webpackChunkName: "entries" */ "../views/Entries.vue"),
   },
   {
     path: "/editors-note",
     name: "Editor's Note",
     component: () =>
-      import(/* webpackChunkName: "editorsnote" */ "../views/EditorsNote.vue")
+      import(/* webpackChunkName: "editorsnote" */ "../views/EditorsNote.vue"),
   },
   {
     path: "/staffbox",
     name: "Staffbox",
     component: () =>
-      import(/* webpackChunkName: "staffbox" */ "../views/Staffbox.vue")
+      import(/* webpackChunkName: "staffbox" */ "../views/Staffbox.vue"),
   },
   {
     path: "/contributors",
     name: "Contributors",
     component: () =>
-      import(/* webpackChunkName: "contributors" */ "../views/Contributors.vue")
-  }
+      import(
+        /* webpackChunkName: "contributors" */ "../views/Contributors.vue"
+      ),
+  },
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
 export default router;
