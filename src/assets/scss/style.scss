@@ -1,1 +1,32 @@
 @import 'includes/fonts';
+
+$ash: #FCFCFC; 
+$gritty: #0c0c0c; 
+$mango: #FEB51A; 
+
+.shifted {
+  &-gritty {
+    &-text {
+      color: $gritty; 
+    }
+    &-bg {
+      background-color: $gritty; 
+    }
+  }
+  &-mango {
+    &-text {
+      color: $mango; 
+    }
+    &-bg {
+      background-color: $mango; 
+    }
+  }
+  &-ash {
+    &-text {
+      color: $ash; 
+    }
+    &-bg {
+      background-color: $ash; 
+    }
+  }
+}
