@@ -15,5 +15,17 @@ export default {
     Navbar,
     Footer,
   },
+  methods: {
+    UpdateLax() {
+      this.$lax.update(window.scrollY);
+      window.requestAnimationFrame(this.UpdateLax);
+    },
+  },
+  mounted: function () {
+    window.requestAnimationFrame(this.UpdateLax);
+  },
+  created: function () {
+    this.$lax.setup();
+  },
 };
 </script>
