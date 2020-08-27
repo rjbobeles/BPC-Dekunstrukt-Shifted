@@ -38,13 +38,13 @@
     >
       <div class="pb-6 flex flex-row items-stretch h-full h-max-full">
         <div class="w-1/2 h-screen" style="margin-top: -4rem">
-          <div class="bg-cover bg-center h-full w-full photoone"></div>
+          <div class="bg-cover bg-center h-full w-full default-bg"></div>
         </div>
         <div
           class="w-1/2 flex flex-col justify-center space-y-16 ml-2"
           style="margin-top: -1.5rem"
         >
-          <router-link to="/editors-note">
+          <router-link to="/editors-note" @click.native="triggerMenu()">
             <tr>
               <td>
                 <span class="minionpro-regular">01</span>
@@ -60,7 +60,7 @@
               </td>
             </tr>
           </router-link>
-          <router-link to="/entries">
+          <router-link to="/entries" @click.native="triggerMenu()">
             <tr>
               <td>
                 <span class="minionpro-regular">02</span>
@@ -76,7 +76,7 @@
               </td>
             </tr>
           </router-link>
-          <router-link to="/staffbox">
+          <router-link to="/staffbox" @click.native="triggerMenu()">
             <tr>
               <td>
                 <span class="minionpro-regular">03</span>
@@ -94,7 +94,7 @@
               </td>
             </tr>
           </router-link>
-          <router-link to="/contributors">
+          <router-link to="/contributors" @click.native="triggerMenu()">
             <tr>
               <td>
                 <span class="minionpro-regular">04</span>
@@ -110,7 +110,7 @@
               </td>
             </tr>
           </router-link>
-          <router-link to="/acknowledgement">
+          <router-link to="/acknowledgement" @click.native="triggerMenu()">
             <tr>
               <td>
                 <span class="minionpro-regular">05</span>
@@ -161,7 +161,7 @@ export default {
     },
   },
   watch: {
-    navActive() {
+    navActive: function () {
       document.body.classList.toggle("dis-scroll");
     },
   },
@@ -172,6 +172,7 @@ export default {
 img.navbar-brand
   height: 2em;
   width: auto;
-.photoone
+
+.default-bg
   background-image: url('../assets/images/dekunstrukt/banner.jpg')
 </style>

@@ -8,7 +8,7 @@
             class="flex flex-col items-center sm:items-start sm:flex-row w-full"
           >
             <div
-              class="w-3/4 flex justify-center sm:justify-start sm:w-1/2 sm:pl-12 lg:pl-16 xl:pl-24 mb-8 sm:mb-0"
+              class="w-3/4 flex justify-center sm:justify-start sm:w-1/2 sm:pl-12 lg:pl-16 xl:pl-24 mb-8 sm:mb-0 items-center"
             >
               <img
                 class="logo"
@@ -73,7 +73,7 @@
           <img
             src="../assets/images/dekunstrukt/capture.jpg"
             ref="foliophoto"
-            class="w-full xl:w-11/12"
+            class="w-full xl:w-11/12 items-center"
           />
         </div>
         <div
