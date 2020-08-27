@@ -4,8 +4,8 @@
     class="text-white w-full max-h-screen flex flex-col absolute z-20"
     :class="{
       'bg-transparent py-12': !showLogo,
-      'bg-black py-8': showLogo,
-      'bg-black': navActive,
+      'bg-gritty py-8': showLogo,
+      'bg-gritty': navActive,
     }"
   >
     <div class="header">
