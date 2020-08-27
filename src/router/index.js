@@ -57,7 +57,7 @@ const routes = [
       import(/* webpackChunkName: "staffbox" */ "../views/404.vue"),
   },
   {
-    path: "404",
+    path: "*",
     redirect: "/404",
   },
 ];
