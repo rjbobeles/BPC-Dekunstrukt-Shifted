@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Navbar :showLogo="false" />
     <div class="banner h-screen relative overflow-hidden">
       <div class="absolute w-full h-full text-white z-10">
         <div class="container flex items-center h-full mx-auto">
@@ -116,7 +117,12 @@
 </template>
 
 <script>
+import Navbar from "@/components/navbar.vue";
+
 export default {
+  components: {
+    Navbar,
+  },
   mounted: function () {
     this.$lax.addElement(this.$refs.parallax);
     this.$lax.addElement(this.$refs.logo);

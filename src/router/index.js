@@ -50,6 +50,16 @@ const routes = [
         /* webpackChunkName: "contributors" */ "../views/Contributors.vue"
       ),
   },
+  {
+    path: "/404",
+    name: "Page not found!",
+    component: () =>
+      import(/* webpackChunkName: "staffbox" */ "../views/404.vue"),
+  },
+  {
+    path: "404",
+    redirect: "/404",
+  },
 ];
 
 const router = new VueRouter({
