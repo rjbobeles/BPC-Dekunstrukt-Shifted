@@ -11,20 +11,14 @@
               class="w-3/4 flex justify-center sm:justify-start sm:w-1/2 sm:pl-12 lg:pl-16 xl:pl-24 mb-8 sm:mb-0"
             >
               <img
-                class="logo lax"
-                data-lax-preset="eager-50"
-                ref="logo"
+                class="logo"
                 src="../assets/images/logo/shifted-logo-white.png"
               />
             </div>
             <div
               class="w-3/4 sm:w-1/2 flex justify-center sm:justify-end sm:pr-12 lg:pr-16 xl:pr-24 text-center sm:text-left"
             >
-              <p
-                class="minionpro-regular text-ash lax"
-                ref="logodesc"
-                data-lax-preset="eager-50"
-              >
+              <p class="minionpro-regular text-ash">
                 The Official Photography Folio <br />of the students of De La
                 Salle-College<br />
                 of St. Benilde
@@ -34,9 +28,7 @@
           <div class="w-full arrow-down flex justify-center absolute left-0">
             <a
               href="#shifted"
-              class="bg-mango p-3 lax"
-              data-lax-preset="eager-50"
-              ref="arrowdown"
+              class="bg-mango p-3"
               v-smooth-scroll="{
                 duration: 1500,
                 easingFunction: 'easeInOutQuad',
@@ -125,18 +117,12 @@ export default {
   },
   mounted: function () {
     this.$lax.addElement(this.$refs.parallax);
-    this.$lax.addElement(this.$refs.logo);
-    this.$lax.addElement(this.$refs.logodesc);
-    this.$lax.addElement(this.$refs.arrowdown);
     this.$lax.addElement(this.$refs.desc);
     this.$lax.addElement(this.$refs.folio);
     this.$lax.addElement(this.$refs.foliophoto);
   },
   beforeDestroy: function () {
     this.$lax.addElement(this.$refs.parallax);
-    this.$lax.addElement(this.$refs.logo);
-    this.$lax.addElement(this.$refs.logodesc);
-    this.$lax.addElement(this.$refs.arrowdown);
     this.$lax.addElement(this.$refs.desc);
     this.$lax.addElement(this.$refs.folio);
     this.$lax.addElement(this.$refs.foliophoto);
