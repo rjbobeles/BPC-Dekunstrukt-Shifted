@@ -1,7 +1,7 @@
 <template>
   <div class="acknoledgements">
     <Navbar :showLogo="true" />
-    <div class="body bg-ash py-48 relative">
+    <div class="body bg-ash py-32 relative">
       <div
         class="bg absolute top-0 left-0 h-screen w-screen bg-center bg-cover"
       ></div>
@@ -102,7 +102,7 @@ export default {
 
 <style lang="scss" scoped>
 .body {
-  transform: translateY(32px);
+  transform: translateY(96px);
   .bg {
     background: linear-gradient(
         rgba(252, 252, 252, 0.7),

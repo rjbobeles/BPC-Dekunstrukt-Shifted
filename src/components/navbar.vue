@@ -38,10 +38,7 @@
     >
       <div class="pb-6 flex flex-row items-stretch h-full h-max-full">
         <div class="w-1/2 h-screen" style="margin-top: -4rem">
-          <img
-            src="../assets/images/dekunstrukt/banner.jpg"
-            class="h-full w-auto"
-          />
+          <div class="bg-cover bg-center h-full w-full photoone"></div>
         </div>
         <div
           class="w-1/2 flex flex-col justify-center space-y-16 ml-2"
@@ -175,4 +172,6 @@ export default {
 img.navbar-brand
   height: 2em;
   width: auto;
+.photoone
+  background-image: url('../assets/images/dekunstrukt/banner.jpg')
 </style>
