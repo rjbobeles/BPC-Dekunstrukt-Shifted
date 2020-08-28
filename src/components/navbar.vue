@@ -37,10 +37,16 @@
       :class="{ hidden: !navActive }"
     >
       <div class="pb-6 flex flex-row items-stretch h-full h-max-full">
-        <div class="w-1/2 h-screen" style="margin-top: -4rem">
+        <div class="h-screen" style="margin-top: -4rem">
           <div
             id="navPhoto"
-            class="bg-cover bg-center h-full w-full default-bg"
+            ref="navPhoto"
+            class="bg-cover bg-center h-full w-full relative z-30 fadeOut"
+          ></div>
+          <div
+            id="defaultPhoto"
+            class="bg-cover bg-center h-full default-bg absolute top-0 left-0"
+            style="width: 50vw"
           ></div>
         </div>
         <div
@@ -165,11 +171,27 @@ export default {
       hoverStaffbox: false,
       hoverContributors: false,
       hoverAcknowledgement: false,
+      hover: false,
+      fadingOut: false,
     };
   },
   methods: {
     triggerMenu() {
       this.navActive = !this.navActive;
+    },
+    toggleFadeInOut() {
+      this.$refs.navPhoto.classList.toggle("fadeOut");
+      this.$refs.navPhoto.classList.toggle("fadeIn");
+    },
+    toggleNavPhoto(nav, photo) {
+      if (this.hover) {
+        this.fadingOut = true;
+        setTimeout(function () {
+          photo.classList.toggle(nav);
+        }, 250);
+        this.fadingOut = false;
+      } else photo.classList.toggle(nav);
+      this.hover = !this.hover;
     },
   },
   props: {
@@ -183,19 +205,24 @@ export default {
       document.body.classList.toggle("dis-scroll");
     },
     hoverEditorsNote() {
-      document.getElementById("navPhoto").classList.toggle("editors-note");
+      this.toggleFadeInOut();
+      this.toggleNavPhoto("editors-note", this.$refs.navPhoto);
     },
     hoverEntries() {
-      document.getElementById("navPhoto").classList.toggle("entries");
+      this.toggleFadeInOut();
+      this.toggleNavPhoto("entries", this.$refs.navPhoto);
     },
     hoverStaffbox() {
-      document.getElementById("navPhoto").classList.toggle("staffbox");
+      this.toggleFadeInOut();
+      this.toggleNavPhoto("staffbox", this.$refs.navPhoto);
     },
     hoverContributors() {
-      document.getElementById("navPhoto").classList.toggle("contributors");
+      this.toggleFadeInOut();
+      this.toggleNavPhoto("contributors", this.$refs.navPhoto);
     },
     hoverAcknowledgement() {
-      document.getElementById("navPhoto").classList.toggle("acknowledgement");
+      this.toggleFadeInOut();
+      this.toggleNavPhoto("acknowledgement", this.$refs.navPhoto);
     },
   },
 };
@@ -209,40 +236,41 @@ img.navbar-brand
 .default-bg
   background-image: url('../assets/images/dekunstrukt/banner.jpg')
 
+#navPhoto
+  width: 50vw;
+
 #navPhoto.editors-note
   background-image: url('../assets/images/navbar/editors-note.jpg')
-  animation-name: fadeIn;
-  animation-duration: 1s;
 
 #navPhoto.entries
   background-image: url('../assets/images/navbar/entries.jpg')
-  animation-name: fadeIn;
-  animation-duration: 1s;
+
 
 #navPhoto.staffbox
   background-image: url('../assets/images/navbar/staffbox.jpg')
-  animation-name: fadeIn;
-  animation-duration: 1s;
+
 
 #navPhoto.contributors
   background-image: url('../assets/images/navbar/contributors.jpg')
-  animation-name: fadeIn;
-  animation-duration: 1s;
+
 
 #navPhoto.acknowledgement
   background-image: url('../assets/images/navbar/acknowledgements.jpg')
+
+
+.fadeIn
   animation-name: fadeIn;
   animation-duration: 1s;
 
 .fadeOut
   animation-name: fadeOut;
-  animation-duration: 1s;
+  animation-duration: 0.35s;
 
 @keyframes fadeIn
   from {opacity: 0;}
   to {opacity: 1;}
 
 @keyframes fadeOut
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {opacity: 1;}
+  to {opacity: 0;}
 </style>
