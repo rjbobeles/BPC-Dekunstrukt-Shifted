@@ -172,7 +172,6 @@ export default {
       hoverContributors: false,
       hoverAcknowledgement: false,
       hover: false,
-      fadingOut: false,
     };
   },
   methods: {
@@ -185,11 +184,9 @@ export default {
     },
     toggleNavPhoto(nav, photo) {
       if (this.hover) {
-        this.fadingOut = true;
         setTimeout(function () {
           photo.classList.toggle(nav);
         }, 250);
-        this.fadingOut = false;
       } else photo.classList.toggle(nav);
       this.hover = !this.hover;
     },
