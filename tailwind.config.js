@@ -26,6 +26,7 @@ module.exports = {
       ash: "#FCFCFC",
       black: "#000000",
       white: "#FFFFFF",
+      marble: "#EFEFEF",
     },
   },
   variants: {},

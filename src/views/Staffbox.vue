@@ -22,12 +22,11 @@
         <div class="container mx-auto px-5">
           <div class="w-full sm:w-2/3 md:w-7/12 lg:w-2/5 xl:w-1/3 mx-auto">
             <EditorialBoard :eb="eb" />
-            Hello
           </div>
         </div>
       </div>
       <div class="parallax bg-cover bg-center"></div>
-      <div class="bg-ash py-16 staff">
+      <div class="bg-marble py-16 staff">
         <div class="container mx-auto px-5">
           <div class="w-full sm:w-2/3 md:w-7/12 lg:w-2/5 xl:w-1/3 mx-auto">
             <Staffbox :staffbox="staffbox" />

@@ -69,7 +69,7 @@
       </div>
       <div class="parallax bg-cover bg-center"></div>
       <div class="latter bg-gritty pt-32">
-        <div class="container minionpro-regular text-ash">
+        <div class="container minionpro-regular text-marble">
           <div class="w-3/4 lg:w-2/5 mx-auto py-5 leading-relaxed mb-16">
             <p class="mb-8">
               A photograph aims not only to be seen, but to be felt. Unravel the
