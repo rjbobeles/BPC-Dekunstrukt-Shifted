@@ -25,8 +25,26 @@ const routes = [
       ),
   },
   {
-    path: "/entries",
+    path: "/entries/:title",
     name: "Entries",
+    beforeEnter: (to, from, next) => {
+      function isValid(param) {
+        switch (param) {
+          case "asd":
+            return 1;
+          case "asd2":
+            return 1;
+          default:
+            return 0;
+        }
+      }
+
+      if (!isValid(to.params.title)) {
+        next({ name: "404" });
+      }
+
+      next();
+    },
     component: () =>
       import(/* webpackChunkName: "entries" */ "../views/Entries.vue"),
   },
@@ -52,7 +70,7 @@ const routes = [
   },
   {
     path: "/404",
-    name: "Page not found!",
+    name: "404",
     component: () =>
       import(/* webpackChunkName: "staffbox" */ "../views/404.vue"),
   },
