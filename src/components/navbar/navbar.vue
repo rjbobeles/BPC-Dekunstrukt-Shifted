@@ -8,7 +8,7 @@
       'bg-gritty': navActive,
     }"
   >
-    <div class="header px-16">
+    <div class="header px-8 sm:px-12 lg:px-16">
       <div
         class="flex text-center"
         :class="{ 'justify-end': !showLogo, 'justify-between': showLogo }"
@@ -18,6 +18,7 @@
             src="../../assets/images/logo/shifted-logo-white.png"
             alt="Shifted Logo"
             class="navbar-brand"
+            v-show="!navActive"
           />
         </router-link>
         <tasty-burger-button
@@ -37,20 +38,20 @@
       :class="{ hidden: !navActive }"
     >
       <div class="pb-6 flex flex-row items-stretch h-full h-max-full">
-        <div class="h-screen" style="margin-top: -4rem">
+        <div class="h-screen hidden sm:block" style="margin-top: -4rem">
           <div
             id="navPhoto"
             ref="navPhoto"
-            class="bg-cover bg-center h-full w-full relative z-30 fadeOut w-screen-2/5 xl:w-screen-1/2"
+            class="bg-cover bg-center h-full w-full relative z-30 fadeOut w-screen-1/4 lg:w-screen-2/5 xl:w-screen-1/2"
           ></div>
           <div
             id="defaultPhoto"
-            class="bg-cover bg-center h-full default-bg absolute top-0 left-0 w-screen-2/5 xl:w-screen-1/2"
+            class="bg-cover bg-center h-full default-bg absolute top-0 left-0 w-screen-1/4 lg:w-screen-2/5 xl:w-screen-1/2"
           ></div>
         </div>
         <div
-          class="w-1/2 flex flex-col justify-center space-y-10 pl-16"
-          style="margin-top: -6rem"
+          class="w-full sm:w-2/3 lg:w-3/5 xl:w-1/2 flex flex-col justify-center space-y-10 pl-8 lg:pl-16"
+          style="margin-top: -4rem"
         >
           <Navlink
             :navitem="navlinks.editorsnote"
@@ -233,8 +234,4 @@ img.navbar-brand
 @keyframes fadeOut
   from {opacity: 1;}
   to {opacity: 0;}
-
-@media only screen and (max-width: 1027px)
-  #navPhoto
-    width: 40vw
 </style>

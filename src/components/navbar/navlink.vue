@@ -1,19 +1,24 @@
 <template>
   <router-link :to="'/' + navitem.slug" @click.native="$emit('triggermenu')">
-    <tr @mouseover="$emit('over')" @mouseleave="$emit('leave')">
-      <td>
+    <div class="flex">
+      <div>
         <span class="minionpro-regular">{{ navitem.number }}</span>
-      </td>
-      <td class="pl-10">
+      </div>
+      <div class="pl-8 sm:pl-10">
         <span class="minionpro-regular">{{ navitem.subtitle }}</span>
-        <h1
-          class="chivo-bold text-mango text-5xl sm:text-2xl md:text-3xl lg:text-5xl leading-none"
-          style="margin: -2px"
-        >
-          {{ navitem.title }}
-        </h1>
-      </td>
-    </tr>
+      </div>
+    </div>
+    <div @mouseover="$emit('over')" @mouseleave="$emit('leave')" class="flex">
+      <div class="invisible hidden sm:block">
+        <span class="minionpro-regular">{{ navitem.number }}</span>
+      </div>
+      <h1
+        class="chivo-bold text-mango sm:pl-10 sm:text-4xl md:text-5xl lg:text-5xl leading-none"
+        style="margin: -2px"
+      >
+        {{ navitem.title }}
+      </h1>
+    </div>
   </router-link>
 </template>
 
@@ -28,3 +33,11 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@media only screen and (max-width: 639px) {
+  h1 {
+    font-size: 9vw;
+  }
+}
+</style>
