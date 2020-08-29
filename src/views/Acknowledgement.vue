@@ -1,6 +1,6 @@
 <template>
   <div class="acknoledgements">
-    <Navbar :showLogo="true" />
+    <Navbar />
     <div class="body bg-ash py-32 relative">
       <div
         class="bg absolute top-0 left-0 h-screen w-screen bg-center bg-cover"

@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <Navbar :showLogo="true" />
+    <Navbar />
     <div class="body">
       <div class="bg-gritty text-ash">
         <div class="container mx-auto px-5">
