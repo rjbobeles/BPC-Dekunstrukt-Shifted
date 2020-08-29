@@ -30,7 +30,13 @@
         <div class="container mx-auto px-5">
           <div class="w-full sm:w-2/3 md:w-7/12 lg:w-2/5 xl:w-1/3 mx-auto">
             <Staffbox :staffbox="staffbox" />
-            <div class="mt-24">
+            <div class="mt-22">
+              <img
+                src="../assets/images/nameplates/dls-csb.png"
+                style="height: 90px"
+                alt="csb-logo"
+                class="mb-6"
+              />
               <p class="minionpro-regular text-gritty text-sm">
                 Dekunstrukt is the official photography folio of the students of
                 De La Salle-College of Saint Benilde (DLS-CSB). No part of this
