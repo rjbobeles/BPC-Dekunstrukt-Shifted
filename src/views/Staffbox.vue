@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import Navbar from "@/components/navbar.vue";
+import Navbar from "@/components/navbar/navbar.vue";
 import EditorialBoard from "@/components/staffbox/editorialBoard.vue";
 import Staffbox from "@/components/staffbox/staffbox.vue";
 

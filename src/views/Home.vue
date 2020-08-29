@@ -109,7 +109,7 @@
 </template>
 
 <script>
-import Navbar from "@/components/navbar.vue";
+import Navbar from "@/components/navbar/navbar.vue";
 
 export default {
   components: {
@@ -134,7 +134,7 @@ export default {
 .banner {
   .banner-bg {
     background-image: url("../assets/images/dekunstrukt/banner.jpg");
-    top: -20rem;
+    top: -21rem;
     height: 120vh;
   }
   .logo {
