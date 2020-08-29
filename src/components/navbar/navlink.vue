@@ -8,12 +8,14 @@
         <span class="minionpro-regular">{{ navitem.subtitle }}</span>
       </div>
     </div>
-    <div @mouseover="$emit('over')" @mouseleave="$emit('leave')" class="flex">
-      <div class="invisible hidden sm:block">
+    <div>
+      <div class="invisible hidden sm:inline">
         <span class="minionpro-regular">{{ navitem.number }}</span>
       </div>
       <h1
-        class="chivo-bold text-mango sm:pl-10 sm:text-4xl md:text-5xl lg:text-5xl leading-none"
+        @mouseover="$emit('over')"
+        @mouseleave="$emit('leave')"
+        class="inline chivo-bold text-mango sm:pl-10 sm:text-4xl md:text-5xl lg:text-5xl leading-none"
         style="margin: -2px"
       >
         {{ navitem.title }}

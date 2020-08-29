@@ -166,7 +166,7 @@ export default {
   },
   watch: {
     navActive() {
-      document.body.classList.toggle("fixed");
+      document.body.classList.toggle("overflow-y-hidden");
     },
     hoverEditorsNote() {
       this.toggleFadeInOut();
