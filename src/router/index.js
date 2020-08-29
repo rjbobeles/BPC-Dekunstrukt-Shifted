@@ -25,14 +25,87 @@ const routes = [
       ),
   },
   {
+    path: "/entries",
+    name: "Entries",
+    redirect: "/entries/c-homecoming",
+  },
+  {
     path: "/entries/:title",
     name: "Entries",
     beforeEnter: (to, from, next) => {
       function isValid(param) {
         switch (param) {
-          case "asd":
+          case "c-homecoming":
             return 1;
-          case "asd2":
+          case "karera-pauwi":
+            return 1;
+          case "pila":
+            return 1;
+          case "little-things":
+            return 1;
+          case "false-hope":
+            return 1;
+          case "para-sa-kultura":
+            return 1;
+          case "panalangin":
+            return 1;
+          case "covered":
+            return 1;
+          case "hanggang-sa-muli":
+            return 1;
+          case "bagong-taon":
+            return 1;
+          case "ID-120":
+            return 1;
+          case "what-was-what-is":
+            return 1;
+          case "siesta":
+            return 1;
+          case "yes-no":
+            return 1;
+          case "inside":
+            return 1;
+          case "time-travelling":
+            return 1;
+          case "time-split":
+            return 1;
+          case "tinig-ng-resistensya":
+            return 1;
+          case "kayod":
+            return 1;
+          case "before-the-pandemic":
+            return 1;
+          case "innocence-lost":
+            return 1;
+          case "iglot":
+            return 1;
+          case "lalabas-ka-ba":
+            return 1;
+          case "no-facemask-no-entry":
+            return 1;
+          case "a-month-apart":
+            return 1;
+          case "but-not-silenced":
+            return 1;
+          case "isolation":
+            return 1;
+          case "aliwan":
+            return 1;
+          case "nakakapanibagong-katahimikan":
+            return 1;
+          case "amidst-adversity":
+            return 1;
+          case "cost-of-education":
+            return 1;
+          case "distanced-unity":
+            return 1;
+          case "silent-voices":
+            return 1;
+          case "new-local-scene":
+            return 1;
+          case "full-gear":
+            return 1;
+          case "pagupit":
             return 1;
           default:
             return 0;
