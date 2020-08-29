@@ -9,6 +9,21 @@ module.exports = {
     container: {
       center: true,
     },
+    extend: {
+      width: {
+        "screen-1/2": "50vw",
+        "screen-1/3": "33.33vw",
+        "screen-2/3": "66.66.vw",
+        "screen-1/4": "25vw",
+        "screen-3/4": "75vw",
+        "screen-1/5": "20vw",
+        "screen-2/5": "40vw",
+        "screen-3/5": "60vw",
+        "screen-4/5": "80vw",
+        "screen-1/6": "16.66vw",
+        "screen-5/6": "83.34vw",
+      },
+    },
     minHeight: {
       0: "0",
       "1/4": "25%",
