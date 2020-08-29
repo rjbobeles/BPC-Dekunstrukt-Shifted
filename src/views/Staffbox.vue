@@ -9,6 +9,12 @@
             class="w-full flex justify-center sm:justify-start sm:w-2/3 md:w-7/12 lg:w-2/5 xl:w-1/3 mx-auto py-16"
           >
             <div>
+              <img
+                src="../assets/images/nameplates/logo-white.png"
+                style="height: 90px"
+                alt="csb-logo"
+                class="mb-6"
+              />
               <h6 class="mb-3">Student Publications Office</h6>
               <h1 class="chivo-bold text-4xl leading-none">
                 Benildean Press Corps
