@@ -91,7 +91,7 @@ export default {
         {
           id: 5,
           title: "False Hope",
-          author: "Reyes, Fritz Ryan B.",
+          author: "Fritz Ryan B. Reyes",
           description:
             "Photos were taken at the very start of the General Community Quarantine wherein people were less restricted to move and to go out of their homes. It has given me the chance to understand people and by the looks of it, we are getting false hope from the government. None of the real problems have been resolved, the rich are still getting richer, and the poor are just getting poorer.",
           slug: "false-hope",
