@@ -8,7 +8,7 @@
       'bg-gritty': navActive,
     }"
   >
-    <div class="header">
+    <div class="header px-2">
       <div
         class="container flex text-center"
         :class="{ 'justify-end': !showLogo, 'justify-between': showLogo }"
