@@ -1,14 +1,51 @@
 <template>
-  <div class="entries">
-    <Navbar :showLogo="true" />
-    <div style="padding-top: 96px">
-      <h1>This is an entires page {{ this.currentEntry.title }}</h1>
+  <div class="body w-full entries">
+    <div>
+      <L1
+        v-if="this.currentEntry.template == 'L1'"
+        :entry="this.currentEntry"
+      />
+      <L1P1
+        v-if="this.currentEntry.template == 'P1L1'"
+        :entry="this.currentEntry"
+      />a
+      <L2
+        v-if="this.currentEntry.template == 'L2'"
+        :entry="this.currentEntry"
+      />
+      <P1
+        v-if="this.currentEntry.template == 'P1'"
+        :entry="this.currentEntry"
+      />
+      <P1L1
+        v-if="this.currentEntry.template == 'P1L1'"
+        :entry="this.currentEntry"
+      />a
+      <P2
+        v-if="this.currentEntry.template == 'P2'"
+        :entry="this.currentEntry"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import L1 from "@/components/entries/L1";
+import L1P1 from "@/components/entries/L1P1";
+import L2 from "@/components/entries/L2";
+import P1 from "@/components/entries/P1";
+import P1L1 from "@/components/entries/P1L1";
+import P2 from "@/components/entries/P2";
+
 export default {
+  components: {
+    L1,
+    L1P1,
+    L2,
+    P1,
+    P1L1,
+    P2,
+  },
   mounted() {
     this.$emit("showLogo", true);
     this.loadEntry(this.$route.params.title);
