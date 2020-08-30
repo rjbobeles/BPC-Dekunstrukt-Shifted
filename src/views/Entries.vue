@@ -1,6 +1,6 @@
 <template>
   <div class="entries">
-    <div class="body h-screen">
+    <div class="body">
       <L1
         v-if="this.currentEntry.template == 'L1'"
         :entry="this.currentEntry"
@@ -722,9 +722,3 @@ export default {
   },
 };
 </script>
-
-<style scoped lang="scss">
-.body {
-  transform: translatey(96px);
-}
-</style>
