@@ -1,8 +1,12 @@
 <template>
   <div id="app">
-    <Navbar :showLogo="isLogoVisible" />
-    <router-view @showLogo="showLogo" />
-    <Footer id="footer" />
+    <div class="flex flex-col justify-between h-screen">
+      <div>
+        <Navbar :showLogo="isLogoVisible" />
+        <router-view @showLogo="showLogo" />
+      </div>
+      <Footer id="footer" />
+    </div>
   </div>
 </template>
 

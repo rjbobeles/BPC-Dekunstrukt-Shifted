@@ -72,7 +72,6 @@ export default {
 
 <style lang="scss" scoped>
 .body {
-  transform: translateY(96px);
   .bg {
     background: linear-gradient(
         rgba(252, 252, 252, 0.7),

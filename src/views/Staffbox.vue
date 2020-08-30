@@ -172,9 +172,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.body {
-  transform: translatey(96px);
-}
 .parallax {
   height: 80vh;
   background-attachment: fixed;

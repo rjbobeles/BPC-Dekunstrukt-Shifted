@@ -63,8 +63,4 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-.body {
-  transform: translatey(96px);
-}
-</style>
+<style scoped lang="scss"></style>
