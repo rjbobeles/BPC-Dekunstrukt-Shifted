@@ -1,24 +1,24 @@
 <template>
   <div
     id="nav"
-    class="text-white w-full max-h-screen flex flex-col absolute z-20"
+    class="text-white w-full max-h-screen flex flex-col absolute z-20 overflow-hidden"
     :class="{
       'bg-transparent py-12': !showLogo,
-      'bg-gritty py-8': showLogo,
-      'bg-gritty': navActive,
     }"
   >
-    <div class="header px-8 sm:px-12 lg:px-16">
+    <div class="header">
       <div
-        class="flex text-center"
-        :class="{ 'justify-end': !showLogo, 'justify-between': showLogo }"
+        class="flex text-center px-8 sm:px-12 lg:px-16"
+        :class="{
+          'justify-end': !showLogo,
+          'justify-between bg-gritty py-8': showLogo,
+        }"
       >
         <router-link v-if="showLogo" to="/">
           <img
             src="../../assets/images/logo/shifted-logo-white.png"
             alt="Shifted Logo"
             class="navbar-brand"
-            v-show="!navActive"
           />
         </router-link>
         <tasty-burger-button
@@ -27,19 +27,24 @@
           size="s"
           color="white"
           active-color="white"
-          class="flex"
+          class="flex relative z-50"
           :key="$route.path"
           @click.native="triggerMenu()"
         />
       </div>
     </div>
     <div
+      class="overlay absolute top-0 left-0 h-screen w-screen transition-opacity duration-500"
+      :class="[navActive ? 'opacity-1' : 'opacity-0']"
+    ></div>
+    <div
       id="navBody"
-      class="flex-grow h-screen"
-      :class="{ hidden: !navActive }"
+      ref="nav"
+      class="flex-grow h-screen bg-gritty transition-transform ease-in-out shadow-2xl"
+      :class="[navActive ? 'show' : 'hide', showLogo ? 'moveUp' : '']"
     >
-      <div class="pb-6 flex flex-row items-stretch h-full h-max-full">
-        <div class="h-screen hidden sm:block" style="margin-top: -4rem">
+      <div class="flex flex-row items-stretch h-full h-max-full">
+        <div class="h-screen hidden sm:block">
           <div
             id="navPhoto"
             ref="navPhoto"
@@ -51,14 +56,14 @@
           ></div>
         </div>
         <div
-          class="w-full sm:w-2/3 lg:w-3/5 xl:w-1/2 flex flex-col justify-center space-y-10 pl-8 lg:pl-16"
-          style="margin-top: -4rem"
+          class="w-full sm:w-3/4 lg:w-3/5 xl:w-1/2 flex flex-col justify-center space-y-10 pl-8 lg:pl-16"
         >
           <Navlink
             :navitem="navlinks.editorsnote"
             @triggermenu="triggerMenu()"
             @over="hoverEditorsNote = true"
             @leave="hoverEditorsNote = false"
+            class="mt-12"
           />
           <Navlink
             :navitem="navlinks.photoentries"
@@ -145,6 +150,12 @@ export default {
   methods: {
     triggerMenu() {
       this.navActive = !this.navActive;
+      if (!this.navActive) {
+        setTimeout(function () {
+          document.getElementById("navBody").classList.toggle("opacity-0");
+        }, 870);
+      } else document.getElementById("navBody").classList.toggle("opacity-0");
+      window.scrollTo(0, 0);
     },
     toggleFadeInOut() {
       this.$refs.navPhoto.classList.toggle("fadeOut");
@@ -159,6 +170,9 @@ export default {
       this.hover = !this.hover;
     },
   },
+  mounted: function () {
+    document.getElementById("navBody").classList.add("opacity-0");
+  },
   props: {
     showLogo: {
       default: true,
@@ -167,7 +181,8 @@ export default {
   },
   watch: {
     navActive() {
-      document.body.classList.toggle("overflow-y-hidden");
+      this.$refs.nav.classList.toggle("absolute");
+      this.$refs.nav.classList.toggle("fixed");
     },
     hoverEditorsNote() {
       this.toggleFadeInOut();
@@ -194,6 +209,21 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+#navBody.hide
+  transform: translate(100vw, -67px);
+
+#navBody.show
+  transform: translate(0, -67px)
+
+#navBody.moveUp
+  margin-top: -30px
+
+#navBody
+  transition-duration: 850ms
+
+.overlay
+  background: rgba(0,0,0,0.7)
+
 img.navbar-brand
   height: 2em;
   width: auto;
