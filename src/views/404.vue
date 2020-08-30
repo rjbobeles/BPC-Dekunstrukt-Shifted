@@ -1,6 +1,5 @@
 <template>
   <div class="four-o-four bg-gritty">
-    <Navbar />
     <div class="container h-full flex justify-center items-center">
       <div class="w-4/5 sm:w-1/2 lg:w-1/3">
         <h1 class="text-mango num chivo-bold leading-tight">404.</h1>
@@ -19,13 +18,10 @@
 </template>
 
 <script>
-import Navbar from "@/components/navbar/navbar.vue";
 export default {
-  components: {
-    Navbar,
-  },
   mounted: function () {
     document.body.classList.remove("fixed");
+    this.$emit("showLogo", true);
   },
 };
 </script>

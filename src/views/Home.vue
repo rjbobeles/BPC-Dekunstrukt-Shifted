@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Navbar :showLogo="false" />
     <div class="banner h-screen relative overflow-hidden">
       <div class="absolute w-full h-full text-white z-10">
         <div class="container flex items-center h-full mx-auto">
@@ -57,8 +56,8 @@
           ref="desc"
         >
           A photograph aims not only to be seen, but to be felt. Unravel the
-          stories behind what you feel in those capture moments. From the bliss,
-          agony and wonder behind those lenses after each shot, let us
+          stories behind what you feel in those captured moments. From the
+          bliss, agony, and wonder behind the lenses after each shot, let us
           understand and feel its hidden message.
         </div>
       </div>
@@ -88,10 +87,10 @@
             </h1>
             <p class="minionpro-regular text-gritty mb-16 md:mb-12 lg:mb-24">
               For this year's photography folio,
-              <span class="minionpro-bold-italic">Dekunstrukt: Shifted</span>
-              gives you the platform to tell the stories even without
-              words—photographs that spark emotions. Here, the captured story
-              matters more than what you used to take the photographs.
+              <span class="minionpro-bold-italic">Dekunstrukt: Shifted</span>,
+              stories are told even without words. Each photograph outlines an
+              emotion. Here, the captured story matters more than what you used
+              to take the photographs.
             </p>
             <div>
               <a
@@ -109,13 +108,9 @@
 </template>
 
 <script>
-import Navbar from "@/components/navbar/navbar.vue";
-
 export default {
-  components: {
-    Navbar,
-  },
   mounted: function () {
+    this.$emit("showLogo", false);
     this.$lax.addElement(this.$refs.parallax);
     this.$lax.addElement(this.$refs.desc);
     this.$lax.addElement(this.$refs.folio);

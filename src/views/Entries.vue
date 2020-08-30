@@ -8,13 +8,9 @@
 </template>
 
 <script>
-import Navbar from "@/components/navbar/navbar";
-
 export default {
-  components: {
-    Navbar,
-  },
   mounted() {
+    this.$emit("showLogo", true);
     this.loadEntry(this.$route.params.title);
   },
   methods: {

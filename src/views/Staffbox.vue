@@ -1,6 +1,5 @@
 <template>
   <div class="about">
-    <Navbar />
     <div class="body">
       <div class="bg-gritty text-ash">
         <div class="container mx-auto px-5">
@@ -61,15 +60,16 @@
 </template>
 
 <script>
-import Navbar from "@/components/navbar/navbar.vue";
 import EditorialBoard from "@/components/staffbox/editorialBoard.vue";
 import Staffbox from "@/components/staffbox/staffbox.vue";
 
 export default {
   components: {
-    Navbar,
     EditorialBoard,
     Staffbox,
+  },
+  mounted: function () {
+    this.$emit("showLogo", true);
   },
   data() {
     return {
@@ -85,18 +85,18 @@ export default {
           { name: "Ivy Berces", position: "Acting Creative Director" },
         ],
         [
-          { name: "Beatrice Mendoza", position: "News Editor" },
+          { name: "Bea Mendoza", position: "News Editor" },
           { name: "Jillian Cu", position: "Sports Editor" },
           { name: "Marinel Peroy", position: "Features Editor" },
           {
             name: "Beatrice Quirante",
             position: "Gumaganap na Patnugot ng Filipino",
           },
+          { name: "Nina Cudal", position: "Photo Editor" },
+          { name: "Michael Ambion ", position: "Layout Editor" },
+          { name: "Vince Zarate", position: "Digital Media Editor" },
           { name: "Jella Gonzaga", position: "Literary Editor" },
           { name: "Ivy Berces", position: "Art + Design Editor" },
-          { name: "Nina Cudal", position: "Photo Editor" },
-          { name: "Vince Zarate", position: "Digital Media Editor" },
-          { name: "Michael Ambion ", position: "Layout Editor" },
         ],
         [
           { name: "Mr. Juan Miguel Lago", position: "Head" },
@@ -128,11 +128,11 @@ export default {
         layout: {
           section: "Layout Artists",
           members: [
-            "Michael Ambion",
             "Ben Allie Antonio",
             "Joshua Paul Gaces",
             "John David Miranda",
             "Andrea Vicencio",
+            "Kitty Jardenil",
           ],
         },
         web: {
@@ -141,26 +141,28 @@ export default {
         },
         managers: {
           section: "Managers",
-          members: ["Ryan Jandrick Obeles", "Gabrielle Angela Gamoras"],
+          members: ["Pia Maghirang", "Raphael GOÑO"],
         },
         artdesign: {
           section: "Art + Design Staffers",
           members: [
-            "Michael Ambion",
-            "Ben Allie Antonio",
-            "Joshua Paul Gaces",
-            "John David Miranda",
-            "Andrea Vicencio",
+            "Gaby Bacani",
+            "Martina Cobres",
+            "Jomer Haban",
+            "Kai Javier",
+            "Kayla Paglisa",
+            "Dominic Zulueta",
           ],
         },
         videogs: {
           section: "Video Producers ",
           members: [
-            "Michael Ambion",
-            "Ben Allie Antonio",
-            "Joshua Paul Gaces",
-            "John David Miranda",
-            "Andrea Vicencio",
+            "Hannah Barredo",
+            "Jyllan Bitalac",
+            "JC Dijan",
+            "Steve Santos",
+            "Martin Uy",
+            "Vince Zarate",
           ],
         },
       },

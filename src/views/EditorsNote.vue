@@ -1,6 +1,5 @@
 <template>
   <div class="editors-note">
-    <Navbar :showLogo="true" />
     <div class="body w-full">
       <div class="bg-ash pt-16 pb-32">
         <div class="w-screen h-32 bg-gritty absolute top-0"></div>
@@ -25,8 +24,7 @@
               <p
                 class="chivo-light text-gritty text-3xl sm:text-4xl md:text-2xl lg:text-4xl mb-24"
               >
-                tell your stories and capture the change whether before, after,
-                or during the birth of the new normal.
+                a testament by Benildeans to the new normal
               </p>
               <div>
                 <p
@@ -43,26 +41,16 @@
         <div class="container minionpro-regular text-ash">
           <div class="w-3/4 lg:w-2/5 mx-auto py-5 leading-relaxed">
             <p class="mb-8">
-              A photograph aims not only to be seen, but to be felt. Unravel the
-              stories behind what you feel in those captured moments. From the
-              bliss, agony, and wonder behind those lenses after each shot, let
-              us understand and feel its hidden message.
+              As the COVID-19 pandemic continuously changes everyone’s way of
+              living, we now have to embrace the new normal. Capturing these
+              abrupt changes serves as a reminder of this monumental change in
+              history.
             </p>
             <p class="mb-8">
-              For this year's photography folio, Dekunstrukt: Shifted gives you
-              the platform to tell the stories even without words—photographs
-              that spark emotions. Here, the captured story matters more than
-              what you used to take the photographs.
-            </p>
-            <p class="mb-8">
-              Tell your stories and capture the change whether before, after or
-              during the birth of the new normal.
-            </p>
-            <p class="mb-8">
-              A photograph aims not only to be seen, but to be felt. Unravel the
-              stories behind what you feel in those captured moments. From the
-              bliss, agony, and wonder behind those lenses after each shot, let
-              us understand and feel its hidden message.
+              This year’s Dekunstrukt, the official photography folio of the
+              students of De La Salle-College of Saint Benilde, exhibits stories
+              that will let you safely witness the outside world, along with how
+              it’s adapting to the necessary changes.
             </p>
           </div>
         </div>
@@ -72,26 +60,25 @@
         <div class="container minionpro-regular text-marble">
           <div class="w-3/4 lg:w-2/5 mx-auto py-5 leading-relaxed mb-16">
             <p class="mb-8">
-              A photograph aims not only to be seen, but to be felt. Unravel the
-              stories behind what you feel in those captured moments. From the
-              bliss, agony, and wonder behind those lenses after each shot, let
-              us understand and feel its hidden message.
+              Welcome to
+              <span class="minionpro-bold-italic">Dekunstrukt: Shifted</span>, a
+              testament by Benildeans to the new normal.
             </p>
             <p class="mb-8">
-              For this year's photography folio, Dekunstrukt: Shifted gives you
-              the platform to tell the stories even without words—photographs
-              that spark emotions. Here, the captured story matters more than
-              what you used to take the photographs.
+              This first ever online photography folio of the College has called
+              Benildeans to take part in leaving a mark along with the rest of
+              the world; capturing scenes before and after the new normal.
             </p>
             <p class="mb-8">
-              Tell your stories and capture the change whether before, after or
-              during the birth of the new normal.
+              In this new experience, learn more about the country we live in
+              today through the emotions and the eyes of the photographer. See
+              the story and feel the emotion in every photo, for a photograph
+              aims not only to be seen but to be felt.
             </p>
             <p class="mb-8">
-              A photograph aims not only to be seen, but to be felt. Unravel the
-              stories behind what you feel in those captured moments. From the
-              bliss, agony, and wonder behind those lenses after each shot, let
-              us understand and feel its hidden message.
+              With most of us limited to the confines of our houses, let these
+              images speak for what your very eyes cannot see for themselves
+              yet.
             </p>
             <div class="my-16">
               <h3 class="chivo-bold text-mango text-2xl">NINA CUDAL</h3>
@@ -108,11 +95,9 @@
 </template>
 
 <script>
-import Navbar from "@/components/navbar/navbar.vue";
-
 export default {
-  components: {
-    Navbar,
+  mounted: function () {
+    this.$emit("showLogo", true);
   },
 };
 </script>
