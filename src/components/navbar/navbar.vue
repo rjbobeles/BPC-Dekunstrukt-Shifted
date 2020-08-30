@@ -28,6 +28,7 @@
           color="white"
           active-color="white"
           class="flex"
+          :key="$route.path"
           @click.native="triggerMenu()"
         />
       </div>

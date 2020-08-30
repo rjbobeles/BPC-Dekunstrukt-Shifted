@@ -1,10 +1,10 @@
 <template>
   <div class="acknoledgements">
-    <div class="body bg-ash w-full pt-32 pb-48">
+    <div class="body bg-ash w-full">
       <div
         class="bg absolute top-0 left-0 h-screen w-screen bg-center bg-cover"
       ></div>
-      <div class="container">
+      <div class="container py-32">
         <div
           class="w-5/6 sm:w-2/3 lg:w-5/12 mx-auto minionpro-regular relative z-10"
         >

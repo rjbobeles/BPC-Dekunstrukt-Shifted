@@ -1,8 +1,8 @@
 <template>
   <div class="editors-note">
     <div class="body w-full">
-      <div class="bg-ash pt-16 pb-32">
-        <div class="w-screen h-32 bg-gritty absolute top-0"></div>
+      <div class="bg-ash pt-8 pb-24 lg:pb-32">
+        <div class="w-screen h-48 bg-gritty absolute top-0"></div>
         <div class="container px-8 flex flex-col md:flex-row relative z-10">
           <div
             class="w-full md:w-1/2 flex justify-center sm:justify-start md:justify-end"
@@ -21,9 +21,7 @@
                 width="45px"
                 class="mb-5"
               />
-              <p
-                class="chivo-light text-gritty text-3xl sm:text-4xl md:text-2xl lg:text-4xl mb-24"
-              >
+              <p class="chivo-light text-gritty text-3xl sm:text-4xl mb-24">
                 a testament by Benildeans to the new normal
               </p>
               <div>
@@ -37,7 +35,7 @@
           </div>
         </div>
       </div>
-      <div class="bg-gritty pt-32 pb-48">
+      <div class="bg-gritty py-32">
         <div class="container minionpro-regular text-ash">
           <div class="w-3/4 lg:w-2/5 mx-auto py-5 leading-relaxed">
             <p class="mb-8">
@@ -46,7 +44,7 @@
               abrupt changes serves as a reminder of this monumental change in
               history.
             </p>
-            <p class="mb-8">
+            <p>
               This year’s Dekunstrukt, the official photography folio of the
               students of De La Salle-College of Saint Benilde, exhibits stories
               that will let you safely witness the outside world, along with how
@@ -107,10 +105,6 @@ export default {
   height: 80vh;
   background-attachment: fixed;
   background-image: url("../assets/images/dekunstrukt/editornote2.jpg");
-  transform: translatey(-96px);
-}
-.latter {
-  transform: translatey(-96px);
 }
 @media only screen and (orientation: portrait) {
   .parallax {

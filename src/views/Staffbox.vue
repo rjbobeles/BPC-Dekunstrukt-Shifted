@@ -176,9 +176,6 @@ export default {
   height: 80vh;
   background-attachment: fixed;
   background-image: url("../assets/images/dekunstrukt/editornote2.jpg");
-  transform: translatey(-96px);
-}
-.staff {
-  transform: translatey(-96px);
+  margin-top: -96px;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="contributors">
-    <div class="body bg-ash w-full pt-16 pb-48">
-      <div class="container flex justify-center mx-auto px-5">
+    <div class="body bg-ash w-full">
+      <div class="container flex justify-center mx-auto px-5 py-24">
         <div class="chivo-bold mx-auto tracking-tight">
           <h1 class="text-gritty text-4xl sm:text-5xl mb-8">Contributors.</h1>
           <div>
