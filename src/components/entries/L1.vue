@@ -1,7 +1,6 @@
 <template>
   <div>
-    L1
-    {{ entry.title }}
+    <img :src="entry.entries[0].url" :alt="entry.description" />
   </div>
 </template>
 
