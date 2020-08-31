@@ -150,11 +150,6 @@ export default {
   methods: {
     triggerMenu() {
       this.navActive = !this.navActive;
-      if (!this.navActive) {
-        setTimeout(function () {
-          document.getElementById("navBody").classList.toggle("opacity-0");
-        }, 870);
-      } else document.getElementById("navBody").classList.toggle("opacity-0");
       window.scrollTo(0, 0);
     },
     toggleFadeInOut() {
@@ -169,9 +164,6 @@ export default {
       } else photo.classList.toggle(nav);
       this.hover = !this.hover;
     },
-  },
-  mounted: function () {
-    document.getElementById("navBody").classList.add("opacity-0");
   },
   props: {
     showLogo: {
@@ -211,9 +203,15 @@ export default {
 <style lang="sass" scoped>
 #navBody.hide
   transform: translate(100vw, -67px);
-
+  animation-name: fadeOutNav;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
 #navBody.show
   transform: translate(0, -67px)
+  animation-name: fadeInNav;
+  -webkit-animation: fadeInNav;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
 
 #navBody.moveUp
   margin-top: -30px
@@ -265,4 +263,20 @@ img.navbar-brand
 @keyframes fadeOut
   from {opacity: 1;}
   to {opacity: 0;}
+
+@keyframes fadeInNav
+  0%
+    opacity: 0;
+    animation-timing-function: linear;
+  25%
+    opacity: 1;
+    animation-timing-function: linear;
+
+@keyframes fadeOutNav
+  80%
+    opacity: 1;
+    animation-timing-function: ease-in;
+  100%
+    opacity: 0;
+    animation-timing-function: ease-in;
 </style>
