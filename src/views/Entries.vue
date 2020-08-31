@@ -1,41 +1,122 @@
 <template>
   <div class="entries">
     <div class="body">
-      <vue-drawer-layout ref="drawerLayout">
-        <div class="drawer" slot="drawer">
-          <div class="body">
-            <h1 class="text-ash">Hello world</h1>
+      <div class="relative">
+        <div class="absolute top-0 left-0 z-20">
+          <div
+            class="flex cursor-pointer transition-all duration-500"
+            @mouseover="overLabel"
+            @mouseleave="leaveLabel"
+            @click="toggleTOC"
+          >
+            <div>
+              <div class="bg-mango">
+                <img src="../assets/images/icons/toc.webp" width="40px" />
+              </div>
+            </div>
+            <div
+              ref="toclabel"
+              class="chivo-bold bg-mango text-gritty text-xl pt-1 tracking-tight w-0 overflow-hidden transition-all duration-500 whitespace-no-wrap"
+            >
+              Table of Contents
+            </div>
           </div>
         </div>
-        <div class="content" slot="content">
-          <div class="body">
-            <L1
-              v-if="this.currentEntry.template == 'L1'"
-              :entry="this.currentEntry"
-            />
-            <L1P1
-              v-if="this.currentEntry.template == 'P1L1'"
-              :entry="this.currentEntry"
-            />
-            <L2
-              v-if="this.currentEntry.template == 'L2'"
-              :entry="this.currentEntry"
-            />
-            <P1
-              v-if="this.currentEntry.template == 'P1'"
-              :entry="this.currentEntry"
-            />
-            <P1L1
-              v-if="this.currentEntry.template == 'P1L1'"
-              :entry="this.currentEntry"
-            />
-            <P2
-              v-if="this.currentEntry.template == 'P2'"
-              :entry="this.currentEntry"
-            />
+        <vue-drawer-layout
+          ref="drawerLayout"
+          :animatable="true"
+          :backdrop="false"
+          :z-index="30"
+          class="h-full"
+        >
+          <div class="drawer h-full pt-8 md:pt-16 lg:pt-24" slot="drawer">
+            <div class="absolute top-0 left-0 pt-4 pl-4 md:pt-8 md:pl-8">
+              <img
+                src="../assets/images/icons/close.png"
+                class="w-3 md:w-5 lg:w-6 opacity-50 cursor-pointer"
+                @click="toggleTOC"
+              />
+            </div>
+            <div class="relative h-full w-screen pl-4 md:pl-12 lg:pl-16">
+              <h3
+                class="text-marble chivo-bold text-2xl text-opacity-75 mb-4 sm:mb-8 lg:mb-12 pl-8 md:pl-12 lg:pl-16"
+              >
+                PHOTO ENTRIES
+              </h3>
+              <div
+                class="toc w-2/3 lg:w-1/2 overflow-y-auto pl-8 md:pl-12 lg:pl-16"
+              >
+                <div>
+                  <navItem
+                    v-for="entry in entries"
+                    :key="entry.id"
+                    :id="entry.id"
+                    :title="entry.title"
+                    :author="entry.author"
+                    :description="entry.description"
+                    :slug="entry.slug"
+                    :isCurrentItem="entry.id == currentEntry.id"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </vue-drawer-layout>
+          <div class="content" slot="content">
+            <div class="body">
+              <div class="invisible">
+                <L1
+                  v-if="this.currentEntry.template == 'L1'"
+                  :entry="this.currentEntry"
+                />
+                <L1P1
+                  v-if="this.currentEntry.template == 'P1L1'"
+                  :entry="this.currentEntry"
+                />
+                <L2
+                  v-if="this.currentEntry.template == 'L2'"
+                  :entry="this.currentEntry"
+                />
+                <P1
+                  v-if="this.currentEntry.template == 'P1'"
+                  :entry="this.currentEntry"
+                />
+                <P1L1
+                  v-if="this.currentEntry.template == 'P1L1'"
+                  :entry="this.currentEntry"
+                />
+                <P2
+                  v-if="this.currentEntry.template == 'P2'"
+                  :entry="this.currentEntry"
+                />
+              </div>
+            </div>
+          </div>
+        </vue-drawer-layout>
+        <L1
+          v-if="this.currentEntry.template == 'L1'"
+          :entry="this.currentEntry"
+        />
+        <L1P1
+          v-if="this.currentEntry.template == 'P1L1'"
+          :entry="this.currentEntry"
+        />
+        <L2
+          v-if="this.currentEntry.template == 'L2'"
+          :entry="this.currentEntry"
+        />
+        <P1
+          v-if="this.currentEntry.template == 'P1'"
+          :entry="this.currentEntry"
+        />
+        <P1L1
+          v-if="this.currentEntry.template == 'P1L1'"
+          :entry="this.currentEntry"
+        />
+        <P2
+          v-if="this.currentEntry.template == 'P2'"
+          :entry="this.currentEntry"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -47,6 +128,7 @@ import L2 from "@/components/entries/L2";
 import P1 from "@/components/entries/P1";
 import P1L1 from "@/components/entries/P1L1";
 import P2 from "@/components/entries/P2";
+import NavItem from "@/components/entries/navItem";
 
 export default {
   components: {
@@ -56,6 +138,7 @@ export default {
     P1,
     P1L1,
     P2,
+    NavItem,
   },
   mounted() {
     this.$emit("showLogo", true);
@@ -67,6 +150,18 @@ export default {
         if (elem.slug == slug) return true;
       });
       this.currentEntry = entry;
+    },
+    toggleTOC() {
+      this.$refs.drawerLayout.toggle();
+      this.isDrawerOpen = !this.isDrawerOpen;
+    },
+    overLabel() {
+      this.$refs.toclabel.classList.add("labelOpen");
+      this.$refs.toclabel.classList.remove("w-0");
+    },
+    leaveLabel() {
+      this.$refs.toclabel.classList.remove("labelOpen");
+      this.$refs.toclabel.classList.add("w-0");
     },
   },
   beforeUpdate() {},
@@ -733,3 +828,44 @@ export default {
   },
 };
 </script>
+
+<style scoped lang="scss">
+.rotateArrow {
+  transform: rotate(180deg);
+}
+.labelOpen {
+  width: 190px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.drawer {
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 0, 0),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0)
+  );
+  .toc {
+    max-height: 60%;
+    direction: rtl;
+  }
+  .toc > * {
+    direction: ltr;
+  }
+  .toc::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .toc::-webkit-scrollbar-thumb {
+    background-color: rgba(220, 220, 220, 0.5);
+    border-radius: 20px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .drawer .toc {
+    max-height: 75%;
+  }
+}
+</style>

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <div class="flex flex-col justify-between h-screen">
-      <div>
+    <div class="flex flex-col justify-between h-screen bg-gritty">
+      <div class="flex flex-col justify-between">
         <Navbar :showLogo="isLogoVisible" />
         <router-view @showLogo="showLogo" />
       </div>
@@ -21,7 +21,7 @@ export default {
   },
   data() {
     return {
-      isLogoVisible: true,
+      isLogoVisible: "",
     };
   },
   methods: {

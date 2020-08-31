@@ -1,7 +1,7 @@
 <template>
   <div
     id="nav"
-    class="text-white w-full max-h-screen flex flex-col absolute z-20 overflow-hidden"
+    class="text-white w-full max-h-screen flex flex-col absolute z-50 overflow-hidden"
     :class="{
       'bg-transparent py-12': !showLogo,
       'pointer-events-none': !navActive,
