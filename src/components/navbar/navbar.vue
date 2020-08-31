@@ -4,11 +4,12 @@
     class="text-white w-full max-h-screen flex flex-col absolute z-20 overflow-hidden"
     :class="{
       'bg-transparent py-12': !showLogo,
+      'pointer-events-none': !navActive,
     }"
   >
     <div class="header">
       <div
-        class="flex text-center px-8 sm:px-12 lg:px-16"
+        class="flex text-center px-8 sm:px-12 lg:px-16 pointer-events-auto"
         :class="{
           'justify-end': !showLogo,
           'justify-between bg-gritty py-8': showLogo,
@@ -34,7 +35,7 @@
       </div>
     </div>
     <div
-      class="overlay absolute top-0 left-0 h-screen w-screen transition-opacity duration-500"
+      class="overlay absolute top-0 left-0 h-screen w-screen transition-all duration-500 pointer-events-none"
       :class="[navActive ? 'opacity-1' : 'opacity-0']"
     ></div>
     <div
@@ -221,6 +222,8 @@ export default {
 
 .overlay
   background: rgba(0,0,0,0.7)
+  pointer-events: none
+
 
 img.navbar-brand
   height: 2em;
@@ -234,7 +237,6 @@ img.navbar-brand
 
 #navPhoto.entries
   background-image: url('../../assets/images/navbar/entries.jpg')
-
 
 #navPhoto.staffbox
   background-image: url('../../assets/images/navbar/staffbox.jpg')
