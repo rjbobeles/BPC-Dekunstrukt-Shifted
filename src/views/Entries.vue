@@ -1,30 +1,41 @@
 <template>
   <div class="entries">
     <div class="body">
-      <L1
-        v-if="this.currentEntry.template == 'L1'"
-        :entry="this.currentEntry"
-      />
-      <L1P1
-        v-if="this.currentEntry.template == 'P1L1'"
-        :entry="this.currentEntry"
-      />
-      <L2
-        v-if="this.currentEntry.template == 'L2'"
-        :entry="this.currentEntry"
-      />
-      <P1
-        v-if="this.currentEntry.template == 'P1'"
-        :entry="this.currentEntry"
-      />
-      <P1L1
-        v-if="this.currentEntry.template == 'P1L1'"
-        :entry="this.currentEntry"
-      />
-      <P2
-        v-if="this.currentEntry.template == 'P2'"
-        :entry="this.currentEntry"
-      />
+      <vue-drawer-layout ref="drawerLayout">
+        <div class="drawer" slot="drawer">
+          <div class="body">
+            <h1 class="text-ash">Hello world</h1>
+          </div>
+        </div>
+        <div class="content" slot="content">
+          <div class="body">
+            <L1
+              v-if="this.currentEntry.template == 'L1'"
+              :entry="this.currentEntry"
+            />
+            <L1P1
+              v-if="this.currentEntry.template == 'P1L1'"
+              :entry="this.currentEntry"
+            />
+            <L2
+              v-if="this.currentEntry.template == 'L2'"
+              :entry="this.currentEntry"
+            />
+            <P1
+              v-if="this.currentEntry.template == 'P1'"
+              :entry="this.currentEntry"
+            />
+            <P1L1
+              v-if="this.currentEntry.template == 'P1L1'"
+              :entry="this.currentEntry"
+            />
+            <P2
+              v-if="this.currentEntry.template == 'P2'"
+              :entry="this.currentEntry"
+            />
+          </div>
+        </div>
+      </vue-drawer-layout>
     </div>
   </div>
 </template>
