@@ -108,7 +108,7 @@ export default {
 }
 @media only screen and (orientation: portrait) {
   .parallax {
-    height: 70vh;
+    height: 50vh;
   }
 }
 </style>
