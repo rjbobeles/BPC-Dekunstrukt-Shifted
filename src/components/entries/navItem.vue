@@ -9,7 +9,7 @@
     <div class="pl-8 sm:pl-12">
       <router-link :to="'/entries/' + slug">
         <h3
-          class="chivo-bold text-xl md:text-2xl"
+          class="chivo-bold text-xl md:text-2xl uppercase"
           :class="[
             isCurrentItem ? 'text-mango' : 'text-marble text-opacity-75 ',
           ]"
