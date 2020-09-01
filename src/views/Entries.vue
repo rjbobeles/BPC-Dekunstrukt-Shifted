@@ -25,8 +25,8 @@
         <vue-drawer-layout
           ref="drawerLayout"
           :animatable="true"
-          :backdrop="false"
           :z-index="30"
+          @mask-click="handleMaskClick"
           class="h-full"
         >
           <div class="drawer h-full pt-8 md:pt-16 lg:pt-24" slot="drawer">
@@ -34,31 +34,33 @@
               <img
                 src="../assets/images/icons/close.png"
                 class="w-3 md:w-5 lg:w-6 opacity-50 cursor-pointer"
-                @click="toggleTOC"
+                @click="closeTOC"
               />
             </div>
-            <div class="relative h-full w-screen pl-4 md:pl-12 lg:pl-16">
-              <h3
-                class="text-marble chivo-bold text-2xl text-opacity-75 mb-4 sm:mb-8 lg:mb-12 pl-8 md:pl-12 lg:pl-16"
-              >
-                PHOTO ENTRIES
-              </h3>
-              <div
-                class="toc w-2/3 lg:w-1/2 overflow-y-auto pl-8 md:pl-12 lg:pl-16"
-              >
-                <div>
-                  <navItem
-                    v-for="entry in entries"
-                    :key="entry.id"
-                    :id="entry.id"
-                    :title="entry.title"
-                    :author="entry.author"
-                    :description="entry.description"
-                    :slug="entry.slug"
-                    :isCurrentItem="entry.id == currentEntry.id"
-                  />
+            <div class="relative h-full w-screen flex pl-4 md:pl-12 lg:pl-16">
+              <div class="w-2/3 lg:w-1/2">
+                <h3
+                  class="text-marble chivo-bold text-2xl text-opacity-75 mb-4 sm:mb-8 lg:mb-12 pl-8 md:pl-12 lg:pl-16"
+                >
+                  PHOTO ENTRIES
+                </h3>
+                <div class="toc w-full overflow-y-auto pl-8 md:pl-12 lg:pl-16">
+                  <div>
+                    <navItem
+                      v-for="entry in entries"
+                      :key="entry.id"
+                      :id="entry.id"
+                      :title="entry.title"
+                      :author="entry.author"
+                      :description="entry.description"
+                      :slug="entry.slug"
+                      :isCurrentItem="entry.id == currentEntry.id"
+                      :ref="entry.id == currentEntry.id ? 'currentItem' : ''"
+                    />
+                  </div>
                 </div>
               </div>
+              <div class="w-1/3 lg:w-1/2" @click="closeTOC"></div>
             </div>
           </div>
           <div class="content" slot="content">
@@ -151,17 +153,36 @@ export default {
       });
       this.currentEntry = entry;
     },
-    toggleTOC() {
-      this.$refs.drawerLayout.toggle();
-      this.isDrawerOpen = !this.isDrawerOpen;
+    openTOC() {
+      this.$refs.drawerLayout.toggle(true);
+      this.isDrawerOpen = true;
+    },
+    closeTOC() {
+      this.$refs.drawerLayout.toggle(false);
+      this.isDrawerOpen = false;
     },
     overLabel() {
-      this.$refs.toclabel.classList.add("labelOpen");
-      this.$refs.toclabel.classList.remove("w-0");
+      if (
+        !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        )
+      ) {
+        this.$refs.toclabel.classList.add("labelOpen");
+        this.$refs.toclabel.classList.remove("w-0");
+      }
     },
     leaveLabel() {
-      this.$refs.toclabel.classList.remove("labelOpen");
-      this.$refs.toclabel.classList.add("w-0");
+      if (
+        !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        )
+      ) {
+        this.$refs.toclabel.classList.remove("labelOpen");
+        this.$refs.toclabel.classList.add("w-0");
+      }
+    },
+    scrollToNavItem() {
+      console.log(this.$refs.currentItem);
     },
   },
   beforeUpdate() {},
