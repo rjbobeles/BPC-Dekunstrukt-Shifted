@@ -1,6 +1,15 @@
 <template>
-  <div>
-    {{ entry.title }}
+  <div class="bg-gritty flex flex-col items-center pt-10">
+    <img
+      :src="entry.entries[0].url"
+      :alt="entry.description"
+      class="sm:w-full xl:w-1/2 pt-2 pb-4"
+    />
+    <img
+      :src="entry.entries[1].url"
+      :alt="entry.description"
+      class="sm:w-full xl:w-1/2 pt-2"
+    />
   </div>
 </template>
 
@@ -9,7 +18,7 @@ export default {
   props: {
     entry: {
       default: null,
-      type: Array,
+      type: Object,
     },
   },
 };

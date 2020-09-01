@@ -9,7 +9,7 @@ export default {
   props: {
     entry: {
       default: null,
-      type: Array,
+      type: Object,
     },
   },
 };
