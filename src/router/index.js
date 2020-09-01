@@ -26,7 +26,7 @@ const routes = [
   },
   {
     path: "/entries",
-    name: "Entries",
+    name: "Entry",
     redirect: "/entries/c-homecoming",
   },
   {

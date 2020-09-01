@@ -1,14 +1,14 @@
 <template>
-  <div class="bg-gritty flex flex-col items-center pt-10">
+  <div class="bg-gritty flex flex-col items-center lg:pt-10">
     <img
       :src="entry.entries[0].url"
       :alt="entry.description"
-      class="sm:w-full xl:w-1/2 pt-2 pb-4"
+      class="sm:w-full xl:w-1/2 lg:pt-2 pb-4"
     />
     <img
       :src="entry.entries[1].url"
       :alt="entry.description"
-      class="sm:w-full xl:w-1/2 pt-2"
+      class="sm:w-full xl:w-1/2 pt-4"
     />
   </div>
 </template>

@@ -537,9 +537,9 @@ export default {
           id: 20,
           title: "The Life Before The Pandemic",
           author: "Edison C. Lin",
-          description: "before-the-pandemic",
-          slug:
+          description:
             "When everything was still normal where face masks and physical distancing were not yet required.",
+          slug: "before-the-pandemic",
           entries: [
             {
               photoId: 1,
