@@ -7,7 +7,7 @@
             class="flex cursor-pointer transition-all duration-500"
             @mouseover="overLabel"
             @mouseleave="leaveLabel"
-            @click="toggleTOC"
+            @click="openTOC"
           >
             <div>
               <div class="bg-mango">
@@ -26,7 +26,6 @@
           ref="drawerLayout"
           :animatable="true"
           :z-index="30"
-          @mask-click="handleMaskClick"
           class="h-full"
         >
           <div class="drawer h-full pt-8 md:pt-16 lg:pt-24" slot="drawer">
