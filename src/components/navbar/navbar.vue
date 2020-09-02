@@ -1,10 +1,12 @@
 <template>
   <div
     id="nav"
-    class="text-white w-full max-h-screen flex flex-col absolute z-50 overflow-hidden"
+    ref="nav"
+    class="text-white w-full max-h-screen flex flex-col z-50 overflow-hidden"
     :class="{
       'bg-transparent py-12': !showLogo,
-      'pointer-events-none': !navActive,
+      'pointer-events-none absolute': !navActive,
+      fixed: navActive,
     }"
   >
     <div class="header">
@@ -40,7 +42,6 @@
     ></div>
     <div
       id="navBody"
-      ref="nav"
       class="flex-grow h-screen bg-gritty transition-transform ease-in-out shadow-2xl"
       :class="[navActive ? 'show' : 'hide', showLogo ? 'moveUp' : '']"
     >
@@ -173,10 +174,6 @@ export default {
     },
   },
   watch: {
-    navActive() {
-      this.$refs.nav.classList.toggle("absolute");
-      this.$refs.nav.classList.toggle("fixed");
-    },
     hoverEditorsNote() {
       this.toggleFadeInOut();
       this.toggleNavPhoto("editors-note", this.$refs.navPhoto);
