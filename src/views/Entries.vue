@@ -11,7 +11,7 @@
           >
             <div>
               <div class="bg-mango">
-                <img src="../assets/images/icons/toc.webp" width="40px" />
+                <img src="../assets/images/icons/toc.png" width="40px" />
               </div>
             </div>
             <div
