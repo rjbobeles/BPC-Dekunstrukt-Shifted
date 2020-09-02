@@ -1,12 +1,12 @@
 <template>
-  <div class="flex mb-6 md:mb-8 lg:mb-12">
+  <div class="flex flex-col sm:flex-row mb-6 md:mb-8 lg:mb-12">
     <div
       class="minionpro-regular text-marble pt-2"
       :class="[isCurrentItem ? 'text-opacity-75' : 'text-opacity-50']"
     >
-      <span><span v-if="id < 10">0</span>{{ id }}</span>
+      <span><span v-if="idno < 10">0</span>{{ idno }}</span>
     </div>
-    <div class="pl-8 sm:pl-12">
+    <div class="sm:pl-8 sm:pl-12">
       <router-link :to="'/entries/' + slug">
         <h3
           class="chivo-bold text-xl md:text-2xl uppercase"
@@ -46,7 +46,7 @@ export default {
       type: String,
       default: null,
     },
-    id: {
+    idno: {
       type: Number,
       default: 0,
     },
@@ -105,6 +105,12 @@ export default {
   to {
     opacity: 1;
     transform: translatex(0px);
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .showDetails {
+    max-height: 360px;
   }
 }
 </style>

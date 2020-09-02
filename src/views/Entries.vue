@@ -29,37 +29,44 @@
           class="h-full"
         >
           <div class="drawer h-full pt-8 md:pt-16 lg:pt-24" slot="drawer">
-            <div class="absolute top-0 left-0 pt-4 pl-4 md:pt-8 md:pl-8">
+            <div
+              class="absolute top-0 left-0 pt-2 sm:pt-4 pl-4 md:pt-8 md:pl-8"
+            >
               <img
                 src="../assets/images/icons/close.png"
                 class="w-3 md:w-5 lg:w-6 opacity-50 cursor-pointer"
                 @click="closeTOC"
               />
             </div>
-            <div class="relative h-full w-screen flex pl-4 md:pl-12 lg:pl-16">
-              <div class="w-2/3 lg:w-1/2">
+            <div
+              class="relative h-full w-screen flex pl-3 sm:pl-4 md:pl-12 lg:pl-16"
+            >
+              <div class="w-4/5 sm:w-2/3 lg:w-1/2">
                 <h3
-                  class="text-marble chivo-bold text-2xl text-opacity-75 mb-4 sm:mb-8 lg:mb-12 pl-8 md:pl-12 lg:pl-16"
+                  class="text-marble chivo-bold text-2xl text-opacity-75 mb-4 sm:mb-8 lg:mb-12 pl-5 sm:pl-8 md:pl-12 lg:pl-16"
                 >
                   PHOTO ENTRIES
                 </h3>
-                <div class="toc w-full overflow-y-auto pl-8 md:pl-12 lg:pl-16">
+                <div
+                  id="toc"
+                  class="toc w-full overflow-y-auto pl-5 sm:pl-8 md:pl-12 lg:pl-16"
+                >
                   <div>
                     <navItem
                       v-for="entry in entries"
                       :key="entry.id"
-                      :id="entry.id"
+                      :idno="entry.id"
                       :title="entry.title"
                       :author="entry.author"
                       :description="entry.description"
                       :slug="entry.slug"
                       :isCurrentItem="entry.id == currentEntry.id"
-                      :ref="entry.id == currentEntry.id ? 'currentItem' : ''"
+                      :id="entry.id == currentEntry.id ? 'currentItem' : ''"
                     />
                   </div>
                 </div>
               </div>
-              <div class="w-1/3 lg:w-1/2" @click="closeTOC"></div>
+              <div class="w-1/5 sm:w-1/3 lg:w-1/2" @click="closeTOC"></div>
             </div>
           </div>
           <div class="content" slot="content">
@@ -155,6 +162,7 @@ export default {
     openTOC() {
       this.$refs.drawerLayout.toggle(true);
       this.isDrawerOpen = true;
+      this.scrollToNavItem();
     },
     closeTOC() {
       this.$refs.drawerLayout.toggle(false);
@@ -181,7 +189,8 @@ export default {
       }
     },
     scrollToNavItem() {
-      console.log(this.$refs.currentItem);
+      const itemPos = document.getElementById("currentItem").offsetTop - 100;
+      document.getElementById("toc").scrollTop = itemPos;
     },
   },
   beforeUpdate() {},
@@ -869,6 +878,7 @@ export default {
   .toc {
     max-height: 60%;
     direction: rtl;
+    scroll-behavior: smooth;
   }
   .toc > * {
     direction: ltr;
