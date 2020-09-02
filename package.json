@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "tailwind": "tailwind build ./src/assets/tailwind/tailwind.css -c ./tailwind.config.js -o ./src/assets/tailwind/output.css",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"

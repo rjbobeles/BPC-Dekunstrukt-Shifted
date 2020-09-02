@@ -41,3 +41,7 @@ export default {
   },
 };
 </script>
+
+<style>
+@import "./assets/tailwind/output";
+</style>
