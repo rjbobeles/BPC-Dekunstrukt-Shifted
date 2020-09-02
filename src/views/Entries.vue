@@ -77,7 +77,7 @@
                   :entry="this.currentEntry"
                 />
                 <L1P1
-                  v-if="this.currentEntry.template == 'P1L1'"
+                  v-if="this.currentEntry.template == 'L1P1'"
                   :entry="this.currentEntry"
                 />
                 <L2
@@ -105,7 +105,7 @@
           :entry="this.currentEntry"
         />
         <L1P1
-          v-if="this.currentEntry.template == 'P1L1'"
+          v-if="this.currentEntry.template == 'L1P1'"
           :entry="this.currentEntry"
         />
         <L2
@@ -786,11 +786,11 @@ export default {
           entries: [
             {
               photoId: 1,
-              url: require("../assets/images/entries/032_CUDAL/1.jpg"),
+              url: require("../assets/images/entries/033_CUDAL/1.jpg"),
             },
             {
               photoId: 2,
-              url: require("../assets/images/entries/032_CUDAL/2.jpg"),
+              url: require("../assets/images/entries/033_CUDAL/2.jpg"),
             },
           ],
           template: "L2",
