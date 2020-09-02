@@ -5,7 +5,7 @@
         <div class="w-screen h-48 bg-gritty absolute top-0"></div>
         <div class="container px-8 flex flex-col md:flex-row relative z-10">
           <div
-            class="w-full md:w-1/2 flex justify-center sm:justify-start md:justify-end"
+            class="w-full md:w-1/2 flex justify-center sm:justify-start md:justify-end items-start"
           >
             <img
               src="../assets/images/dekunstrukt/editornote1.jpg"

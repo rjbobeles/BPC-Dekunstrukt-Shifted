@@ -68,11 +68,13 @@
         ref="folio"
         data-lax-opacity="800 1, 600 0"
       >
-        <div class="md:w-1/2 flex justify-end px-8 capture order-2 md:order-1">
+        <div
+          class="md:w-1/2 flex justify-end px-8 capture order-2 md:order-1 items-start"
+        >
           <img
             src="../assets/images/dekunstrukt/capture.jpg"
             ref="foliophoto"
-            class="w-full xl:w-11/12 items-center"
+            class="w-full xl:w-11/12"
           />
         </div>
         <div

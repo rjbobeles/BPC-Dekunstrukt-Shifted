@@ -256,12 +256,12 @@ img.navbar-brand
   animation-duration: 0.35s;
 
 @keyframes fadeIn
-  from {opacity: 0;}
+  from {opacity: 0; background-image:none ;}
   to {opacity: 1;}
 
 @keyframes fadeOut
   from {opacity: 1;}
-  to {opacity: 0;}
+  to { opacity: 0; background-image:none; }
 
 @keyframes fadeInNav
   0%
