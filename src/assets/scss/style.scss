@@ -15,3 +15,7 @@ $marble: #EFEFEF;
 .body {
     padding-top: 96px;
 }
+
+.drawer-wrap {
+    transition: transform 0.7s ease !important; 
+}
