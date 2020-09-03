@@ -22,7 +22,6 @@ export default {
   data() {
     return {
       isLogoVisible: "",
-      isNavFixed: "",
     };
   },
   methods: {
@@ -32,9 +31,6 @@ export default {
     },
     showLogo(value) {
       this.isLogoVisible = value;
-    },
-    fixedNav(value) {
-      this.isNavFixed = value;
     },
   },
   mounted: function () {
