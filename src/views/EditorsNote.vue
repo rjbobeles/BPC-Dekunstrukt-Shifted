@@ -21,8 +21,11 @@
                 width="45px"
                 class="mb-5"
               />
-              <p class="chivo-light text-gritty text-3xl sm:text-4xl mb-24">
-                a testament by Benildeans to the new normal
+              <p
+                class="chivo-light text-gritty text-3xl text-2xl lg:text-4xl mb-24"
+              >
+                See the story and feel the emotion in every photo, for a
+                photograph aims not only to be seen but to be felt.
               </p>
               <div>
                 <p
@@ -85,7 +88,7 @@
               </p>
             </div>
           </div>
-          <hr class="mx-12" />
+          <hr class="mx-8" />
         </div>
       </div>
     </div>
