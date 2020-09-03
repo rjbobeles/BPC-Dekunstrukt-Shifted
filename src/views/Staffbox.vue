@@ -117,11 +117,11 @@ export default {
         photostaffers: {
           section: "Photo Staffers",
           members: [
-            "Michael Ambion",
-            "Ben Allie Antonio",
-            "Joshua Paul Gaces",
-            "John David Miranda",
-            "Andrea Vicencio",
+            "AJ Surema",
+            "Anne Valmeo",
+            "Denise Paule",
+            "Enrique Bejar",
+            "Fritz Reyes",
           ],
         },
         layout: {
@@ -140,7 +140,7 @@ export default {
         },
         managers: {
           section: "Managers",
-          members: ["Pia Maghirang", "Raphael GOÑO"],
+          members: ["Pia Maghirang", "Raphael Goño"],
         },
         artdesign: {
           section: "Art + Design Staffers",
