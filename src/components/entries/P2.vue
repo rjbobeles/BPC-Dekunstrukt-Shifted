@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gritty flex flex-col lg:flex-row justify-around items-center">
+  <div class="bg-gritty flex flex-col justify-around items-center">
     <img
       :src="entry.entries[0].url"
       :alt="entry.description"

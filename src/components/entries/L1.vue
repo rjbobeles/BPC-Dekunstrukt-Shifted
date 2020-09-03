@@ -1,6 +1,10 @@
 <template>
   <div class="bg-gritty flex flex-col items-center">
-    <img :src="entry.entries[0].url" :alt="entry.description" class="w-full" />
+    <img
+      :src="entry.entries[0].url"
+      :alt="entry.description"
+      class="w-screen-3/4"
+    />
   </div>
 </template>
 
