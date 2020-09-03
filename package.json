@@ -13,6 +13,7 @@
     "postcss-import": "^12.0.1",
     "vue": "^2.6.11",
     "vue-drawer-layout": "^1.3.0",
+    "vue-mousefollower": "0.0.1",
     "vue-router": "^3.2.0",
     "vue-tasty-burgers": "^1.2.3",
     "vue2-smooth-scroll": "^1.5.0"

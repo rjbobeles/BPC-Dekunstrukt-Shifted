@@ -42,6 +42,7 @@
         class="banner-bg lax h-screen bg-cover bg-center relative"
         data-lax-preset="lazy-500"
         ref="parallax"
+        v-mousefollower:[60]
       ></div>
     </div>
     <div
@@ -113,13 +114,11 @@
 export default {
   mounted: function () {
     this.$emit("showLogo", false);
-    this.$lax.addElement(this.$refs.parallax);
     this.$lax.addElement(this.$refs.desc);
     this.$lax.addElement(this.$refs.folio);
     this.$lax.addElement(this.$refs.foliophoto);
   },
   beforeDestroy: function () {
-    this.$lax.addElement(this.$refs.parallax);
     this.$lax.addElement(this.$refs.desc);
     this.$lax.addElement(this.$refs.folio);
     this.$lax.addElement(this.$refs.foliophoto);
@@ -131,8 +130,7 @@ export default {
 .banner {
   .banner-bg {
     background-image: url("../assets/images/dekunstrukt/banner.jpg");
-    top: -21rem;
-    height: 120vh;
+    height: 100vh;
   }
   .logo {
     width: 320px;
