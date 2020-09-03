@@ -3,7 +3,6 @@
     <div class="body">
       <div class="bg-gritty text-ash">
         <div class="container mx-auto px-5">
-          <hr />
           <div
             class="w-full flex justify-center sm:justify-start sm:w-2/3 md:w-7/12 lg:w-2/5 xl:w-1/3 mx-auto py-16"
           >
