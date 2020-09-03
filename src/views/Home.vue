@@ -74,20 +74,20 @@
           <img
             src="../assets/images/dekunstrukt/capture.jpg"
             ref="foliophoto"
-            class="w-full xl:w-11/12"
+            class="w-full xl:w-3/4"
           />
         </div>
         <div
           class="capture md:w-1/2 mb-12 md:mb-0 pl-0 pl-8 pr-8 md:pr-0 lg:pl-16 md:pt-8 lg:pt-32 flex order-1 md:order-2 lax"
         >
-          <div class="w-full md:w-5/6 xl:w-3/4 h-2/5 flex flex-col">
+          <div class="w-full md:w-5/6 xl:w-3/5 h-2/5 flex flex-col">
             <h1
               class="chivo-bold text-mango text-5xl sm:text-6xl md:text-5xl lg:text-6xl leading-none mb-8"
             >
               Capture <br />
               the Change
             </h1>
-            <p class="minionpro-regular text-gritty mb-16 md:mb-12 lg:mb-24">
+            <p class="minionpro-regular text-gritty mb-16 md:mb-12 lg:mb-32">
               For this year's photography folio,
               <span class="minionpro-bold-italic">Dekunstrukt: Shifted</span>,
               stories are told even without words. Each photograph outlines an
@@ -95,10 +95,10 @@
               to take the photographs.
             </p>
             <div>
-              <a
-                href="#"
+              <router-link
+                to="/entries/"
                 class="text-mango chivo-bold text-2xl bg-gritty px-5 py-2"
-                >VIEW FOLIO ⟶</a
+                >VIEW FOLIO ⟶</router-link
               >
             </div>
           </div>
