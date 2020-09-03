@@ -3,7 +3,11 @@
     <div class="body bg-ash w-full">
       <div class="container flex justify-center mx-auto px-5 py-24">
         <div class="chivo-bold mx-auto tracking-tight">
-          <h1 class="text-gritty text-4xl sm:text-5xl mb-8">Contributors.</h1>
+          <h1
+            class="chivo-bold text-mango bg-gritty px-3 py-2 inline-block text-xl mb-12"
+          >
+            CONTRIBUTORS
+          </h1>
           <div>
             <h3
               v-for="human in contributors"
