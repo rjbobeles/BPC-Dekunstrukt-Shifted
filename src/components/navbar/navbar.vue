@@ -5,8 +5,9 @@
     class="text-white w-full max-h-screen flex flex-col z-50 overflow-hidden"
     :class="{
       'bg-transparent py-12': !showLogo,
-      'pointer-events-none absolute': !navActive,
-      fixed: navActive,
+      'pointer-events-none': !navActive,
+      fixed: navActive || showLogo,
+      absolute: !showLogo && !navActive,
     }"
   >
     <div class="header">
@@ -245,23 +246,6 @@ img.navbar-brand
 
 #navPhoto.acknowledgement
   background-image: url('../../assets/images/navbar/acknowledgements.jpg')
-
-
-.fadeIn
-  animation-name: fadeIn;
-  animation-duration: 1s;
-
-.fadeOut
-  animation-name: fadeOut;
-  animation-duration: 0.35s;
-
-@keyframes fadeIn
-  from {opacity: 0; background-image:none ;}
-  to {opacity: 1;}
-
-@keyframes fadeOut
-  from {opacity: 1;}
-  to { opacity: 0; background-image:none; }
 
 @keyframes fadeInNav
   0%
