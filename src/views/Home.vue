@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="banner h-screen relative overflow-hidden">
-      <div class="absolute w-full h-full text-white z-10">
+      <div class="absolute w-full h-full text-white z-10 overflow-x-hidden">
         <div class="container flex items-center h-full mx-auto">
           <div
             class="flex flex-col items-center sm:items-start sm:flex-row w-full"
