@@ -95,7 +95,7 @@ export default {
           { name: "Michael Ambion ", position: "Layout Editor" },
           { name: "Vince Zarate", position: "Digital Media Editor" },
           { name: "Jella Gonzaga", position: "Literary Editor" },
-          { name: "Ivy Berces", position: "Art + Design Editor" },
+          { name: "Kai Javier", position: "Acting Art + Design Editor" },
         ],
         [
           { name: "Mr. Juan Miguel Lago", position: "Head" },
@@ -117,11 +117,11 @@ export default {
         photostaffers: {
           section: "Photo Staffers",
           members: [
-            "AJ Surema",
-            "Anne Valmeo",
-            "Denise Paule",
             "Enrique Bejar",
+            "Denise Paule",
             "Fritz Reyes",
+            "Anne Valmeo",
+            "AJ Surema",
           ],
         },
         layout: {
@@ -136,7 +136,7 @@ export default {
         },
         web: {
           section: "Web Developers",
-          members: ["Ryan Jandrick Obeles", "Gabrielle Angela Gamoras"],
+          members: ["Gabrielle Angela Gamoras", "Ryan Jandrick Obeles"],
         },
         managers: {
           section: "Managers",
@@ -145,10 +145,9 @@ export default {
         artdesign: {
           section: "Art + Design Staffers",
           members: [
-            "Gaby Bacani",
             "Martina Cobres",
             "Jomer Haban",
-            "Kai Javier",
+            "Gaby Bacani",
             "Kayla Paglisa",
             "Dominic Zulueta",
           ],

@@ -120,13 +120,13 @@ export default {
         editorsnote: {
           number: "01",
           title: "Editor's Note",
-          subtitle: "Nina Kiara Cudal",
+          subtitle: "Niña Kiara Cudal",
           slug: "editors-note",
         },
         photoentries: {
           number: "02",
           title: "The Folio",
-          subtitle: "The Folio",
+          subtitle: "Photo Entries",
           slug: "entries",
         },
         ebsb: {

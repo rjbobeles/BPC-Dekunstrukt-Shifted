@@ -82,7 +82,7 @@
               yet.
             </p>
             <div class="my-16">
-              <h3 class="chivo-bold text-mango text-2xl">NINA CUDAL</h3>
+              <h3 class="chivo-bold text-mango text-2xl">NIÑA CUDAL</h3>
               <p class="minionpro-regular text-ash text-xs tracking-widest">
                 PHOTO EDITOR, THE BENILDEAN PRESS CORPS
               </p>
