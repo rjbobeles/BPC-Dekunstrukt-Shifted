@@ -41,7 +41,10 @@
             <div
               class="relative h-full w-screen flex pl-3 sm:pl-4 md:pl-12 lg:pl-16"
             >
-              <div class="w-4/5 sm:w-2/3 lg:w-1/2">
+              <div
+                class="w-4/5 sm:w-2/3 lg:w-1/2"
+                :class="{ fadeIn: isDrawerOpen, fadeOut: !isDrawerOpen }"
+              >
                 <h3
                   class="text-marble chivo-bold text-2xl text-opacity-75 mb-4 sm:mb-8 lg:mb-12 pl-5 sm:pl-8 md:pl-12 lg:pl-16"
                 >
@@ -204,6 +207,7 @@ export default {
   data() {
     return {
       currentEntry: {},
+      isDrawerOpen: false,
       entries: [
         {
           id: 1,
@@ -480,7 +484,7 @@ export default {
           title: "Time Traveling to Tayabas",
           author: "Samantha Sandoval",
           description:
-            "50 words: Manong Rogelio is a farmer in Tayabas, Quezon. Pre-lockdown, he walked me through his tasks around the farmstead, including how he fed and tended to his favorite chickens. Surrounded by the greenery of crops and trees, life had never felt simpler, still blind to the pandemic about to enter our lands. Longer version: his regular tasks around the farmstead, including how he fed and tended to his favorite chickens. Amongst the greenery of fresh crops and native trees, life had never felt simpler. Little did we know that the pandemic had already begun to take root in nearby countries and was about to enter our’s—effectively redefining normalcy in our lives and daily routines as we know it. It's almost surreal to me how this tranquil fragment of time was only a little while before the lockdown. We asked him how he's been doing now, to which he replied saying that although they've been catching colds because of the weather, they're lucky to be productive and alive.",
+            "Manong Rogelio is a farmer in Tayabas, Quezon. Pre-lockdown, he walked me through his tasks around the farmstead, including how he fed and tended to his favorite chickens. Surrounded by the greenery of crops and trees, life had never felt simpler, still blind to the pandemic about to enter our lands.",
           slug: "time-travelling",
           entries: [
             {
