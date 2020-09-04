@@ -59,7 +59,7 @@
 
           <div class="flex flex-row justify-between pt-4 items-center">
             <img
-              src="../assets/images/orgs/aisec.png"
+              src="../assets/images/orgs/aiesec.png"
               style="height: 40px"
               alt="aisec-logo"
               class="mb-6"
