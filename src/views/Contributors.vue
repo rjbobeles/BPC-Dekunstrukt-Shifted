@@ -3,9 +3,7 @@
     <div class="body bg-ash w-full">
       <div class="container flex justify-center mx-auto px-5 py-24">
         <div class="chivo-bold mx-auto tracking-tight">
-          <h1
-            class="chivo-bold text-mango bg-gritty px-3 py-2 inline-block text-xl mb-12"
-          >
+          <h1 class="chivo-bold text-marble inline-block text-4xl mb-12">
             CONTRIBUTORS
           </h1>
           <div>
@@ -66,4 +64,15 @@ export default {
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.body {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 1)
+    ),
+    url("../assets/images/dekunstrukt/contributors.png");
+  background-position: center;
+  background-size: cover;
+}
+</style>
