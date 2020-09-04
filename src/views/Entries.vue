@@ -730,7 +730,7 @@ export default {
         },
         {
           id: 30,
-          title: '"Hope amidst adversity".',
+          title: "Hope amidst adversity",
           author: "Joshua Ryan A. Rellera",
           description: "Faces during pandemic.",
           slug: "amidst-adversity",
