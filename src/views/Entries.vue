@@ -42,7 +42,7 @@
               class="relative h-full w-screen flex pl-3 sm:pl-4 md:pl-12 lg:pl-16"
             >
               <div
-                class="w-4/5 sm:w-2/3 lg:w-1/2"
+                class="w-4/5 sm:w-2/3 lg:w-1/2 h-inherit"
                 :class="{ fadeIn: isDrawerOpen, fadeOut: !isDrawerOpen }"
               >
                 <h3
@@ -52,7 +52,7 @@
                 </h3>
                 <div
                   id="toc"
-                  class="toc w-full overflow-y-auto pl-5 sm:pl-8 md:pl-12 lg:pl-16"
+                  class="toc relative float-left w-full overflow-y-auto pl-5 sm:pl-8 md:pl-12 lg:pl-16"
                 >
                   <div>
                     <navItem
