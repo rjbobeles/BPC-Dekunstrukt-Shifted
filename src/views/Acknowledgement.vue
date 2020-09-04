@@ -56,6 +56,27 @@
             it. You are the main reason we consider this folio a triumph. We are
             proud and grateful for your works.
           </p>
+
+          <div class="flex flex-row justify-between pt-4 items-center">
+            <img
+              src="../assets/images/orgs/aisec.png"
+              style="height: 40px"
+              alt="aisec-logo"
+              class="mb-6"
+            />
+            <img
+              src="../assets/images/orgs/cba.png"
+              style="height: 70px"
+              alt="cba-logo"
+              class="mb-6"
+            />
+            <img
+              src="../assets/images/orgs/saga.png"
+              style="height: 70px"
+              alt="saga-logo"
+              class="mb-6"
+            />
+          </div>
         </div>
       </div>
     </div>
