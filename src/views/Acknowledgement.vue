@@ -99,7 +99,9 @@ export default {
         rgba(252, 252, 252, 0.8),
         rgba(252, 252, 252, 1)
       ),
-      url("../assets/images/dekunstrukt/acknowledgements.jpg");
+      url("../assets/images/dekunstrukt/acknowledgements.png");
+    background-position: center;
+    background-size: cover;
   }
 }
 </style>

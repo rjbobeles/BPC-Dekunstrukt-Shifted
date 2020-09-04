@@ -73,7 +73,7 @@
           class="md:w-1/2 flex justify-end px-8 capture order-2 md:order-1 items-start"
         >
           <img
-            src="../assets/images/dekunstrukt/capture.jpg"
+            src="../assets/images/dekunstrukt/capture.png"
             ref="foliophoto"
             class="w-full xl:w-3/4"
           />

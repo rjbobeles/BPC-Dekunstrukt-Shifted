@@ -32,6 +32,9 @@ $marble: #EFEFEF;
   animation-fill-mode: both;
 }
 
+.vel-modal {
+    background: rgba(0,0,0,0.9) !important; 
+}
 
 @keyframes fadeIn {
   from {opacity: 0; background-image:none ;}

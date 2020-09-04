@@ -8,7 +8,7 @@
             class="w-full md:w-1/2 flex justify-center sm:justify-start md:justify-end items-start"
           >
             <img
-              src="../assets/images/dekunstrukt/editornote1.jpg"
+              src="../assets/images/dekunstrukt/editornote1.png"
               class="w-full md:w-full lg:w-5/6 xl:w-5/6 mb-12 md:mb-0"
             />
           </div>
@@ -82,6 +82,10 @@
               yet.
             </p>
             <div class="my-16">
+              <img
+                src="../assets/images/dekunstrukt/e-sign.png"
+                width="200px"
+              />
               <h3 class="chivo-bold text-mango text-2xl">NIÑA CUDAL</h3>
               <p class="minionpro-regular text-ash text-xs tracking-widest">
                 PHOTO EDITOR, THE BENILDEAN PRESS CORPS
@@ -107,7 +111,7 @@ export default {
 .parallax {
   height: 80vh;
   background-attachment: fixed;
-  background-image: url("../assets/images/dekunstrukt/editornote2.jpg");
+  background-image: url("../assets/images/dekunstrukt/editornote2.png");
 }
 @media only screen and (orientation: portrait) {
   .parallax {

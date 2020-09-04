@@ -173,7 +173,7 @@ export default {
 .parallax {
   height: 80vh;
   background-attachment: fixed;
-  background-image: url("../assets/images/dekunstrukt/editornote2.jpg");
+  background-image: url("../assets/images/dekunstrukt/staffbox.png");
   margin-top: -96px;
 }
 </style>
