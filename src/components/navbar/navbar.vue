@@ -231,21 +231,19 @@ img.navbar-brand
   background-image: url('../../assets/images/dekunstrukt/banner.jpg')
 
 #navPhoto.editors-note
-  background-image: url('../../assets/images/navbar/editors-note.jpg')
+  background-image: url('../../assets/images/navbar/editors-note.png')
 
 #navPhoto.entries
   background-image: url('../../assets/images/navbar/entries.jpg')
 
 #navPhoto.staffbox
-  background-image: url('../../assets/images/navbar/staffbox.jpg')
-
+  background-image: url('../../assets/images/navbar/staffbox.png')
 
 #navPhoto.contributors
-  background-image: url('../../assets/images/navbar/contributors.jpg')
-
+  background-image: url('../../assets/images/navbar/contributors.png')
 
 #navPhoto.acknowledgement
-  background-image: url('../../assets/images/navbar/acknowledgements.jpg')
+  background-image: url('../../assets/images/navbar/acknowledgements.png')
 
 @keyframes fadeInNav
   0%

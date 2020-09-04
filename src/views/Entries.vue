@@ -193,7 +193,7 @@ export default {
           title: "C. Homecoming",
           author: "Miguel Belen",
           description:
-            "A man, probably a dad working in manila with a family in Cebu. Coming from a childhood in which my mom did the same thing i wouldn't say my guess if too far fetched. Homecoming is usually celebrated, but maybe not when you're not sure what he's coming home with.",
+            "A man, probably a dad working in Manila with a family in Cebu. Coming from a childhood in which my mom did the same thing i wouldn't say my guess if too far fetched. Homecoming is usually celebrated, but maybe not when you're not sure what he's coming home with.",
           slug: "c-homecoming",
           entries: [
             {
@@ -306,7 +306,7 @@ export default {
           title: "Panalangin at mga Hiling",
           author: "Alleison Llenes Dimatulac",
           description:
-            "Likhang madasalin ang mga pilipino. Nananatili ang pag-asa sa puso at pananampalataya. Hiling ang makasabay sa pagbabago ng ikot ng mundo.",
+            "Likhang madasalin ang mga Pilipino. Nananatili ang pag-asa sa puso at pananampalataya. Hiling ang makasabay sa pagbabago ng ikot ng mundo.",
           slug: "panalangin",
           entries: [
             {
@@ -377,7 +377,7 @@ export default {
           title: "ID 120",
           author: "Maria Francesca A. Ocampo",
           description:
-            "When we used to forget our IDs when going out - it wasn't that big of a deal, but now forgetting our passes when going out - it is a big deal.",
+            "When we used to forget our IDs when going out — it wasn't that big of a deal, but now forgetting our passes when going out — it is a big deal.",
           slug: "id-120",
           entries: [
             {
@@ -482,7 +482,7 @@ export default {
           title: "Time Split",
           author: "Sofia Emille M. Platon",
           description:
-            "A student who faces the change. It shows how we are before versus how we are right now. That the struggles are different. We can be stress but we enjoy what we do, or having to do it because we are forced. That change can mean a good or bad thing.",
+            "A student who faces the change. It shows how we are before versus how we are right now. That the struggles are different. We can be stressed but we enjoy what we do, or having to do it because we are forced. That change can mean a good or bad thing.",
           slug: "time-split",
           entries: [
             {
@@ -640,7 +640,7 @@ export default {
           title: "Masked, But Not Silenced",
           author: "Anne Valmeo",
           description:
-            "In the middle of a pandemic, the Filipino people were forced to go out in the streets to fight a deadlier virus –– the Duterte administration –– who uses COVID-19 as a pretext to target and silence critics. But no mask can silence dissenting voices.",
+            "In the middle of a pandemic, the Filipino people were forced to go out in the streets to fight a deadlier virus—the Duterte administration—who uses COVID-19 as a pretext to target and silence critics. But no mask can silence dissenting voices.",
           slug: "but-not-silenced",
           entries: [
             {
@@ -727,7 +727,7 @@ export default {
         },
         {
           id: 31,
-          title: '"The Cost of Education"',
+          title: "The Cost of Education",
           author: "Rochellea Giganto Dizon",
           description:
             "Not every children has access to education during the pandemic. This child who risks his life outside while asking for financial help for the sake of his education, made me realize that it’s a terrible thing how we easily take things for granted while others bear the brunt of everyday.",
