@@ -5,8 +5,6 @@
         <div class="absolute top-0 left-0 z-20">
           <div
             class="flex cursor-pointer transition-all duration-500"
-            @mouseover="overLabel"
-            @mouseleave="leaveLabel"
             @click="openTOC"
           >
             <div>
@@ -16,7 +14,8 @@
             </div>
             <div
               ref="toclabel"
-              class="chivo-bold bg-mango text-gritty text-xl pt-1 tracking-tight w-0 overflow-hidden transition-all duration-500 whitespace-no-wrap"
+              class="chivo-bold toc-label bg-mango text-gritty text-xl pt-1 tracking-tight transition-all duration-500 whitespace-no-wrap"
+              :class="[isDrawerOpen ? 'w-0 overflow-hidden' : 'px-3']"
             >
               Table of Contents
             </div>
@@ -170,26 +169,6 @@ export default {
     closeTOC() {
       this.$refs.drawerLayout.toggle(false);
       this.isDrawerOpen = false;
-    },
-    overLabel() {
-      if (
-        !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          navigator.userAgent
-        )
-      ) {
-        this.$refs.toclabel.classList.add("labelOpen");
-        this.$refs.toclabel.classList.remove("w-0");
-      }
-    },
-    leaveLabel() {
-      if (
-        !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          navigator.userAgent
-        )
-      ) {
-        this.$refs.toclabel.classList.remove("labelOpen");
-        this.$refs.toclabel.classList.add("w-0");
-      }
     },
     scrollToNavItem() {
       const itemPos = document.getElementById("currentItem").offsetTop - 100;
@@ -866,11 +845,6 @@ export default {
 .rotateArrow {
   transform: rotate(180deg);
 }
-.labelOpen {
-  width: 190px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
 .drawer {
   background-image: linear-gradient(
     to right,
@@ -900,6 +874,14 @@ export default {
 @media only screen and (max-width: 1023px) {
   .drawer .toc {
     max-height: 75%;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .toc-label {
+    width: 0 !important;
+    overflow: hidden !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 </style>
