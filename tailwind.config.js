@@ -24,6 +24,7 @@ module.exports = {
         "screen-5/6": "83.34vw",
       },
       height: {
+        inherit: "inherit",
         "screen-1/2": "50vh",
         "screen-1/3": "33.33vh",
         "screen-2/3": "66.66.vh",

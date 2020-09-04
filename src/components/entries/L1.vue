@@ -3,7 +3,7 @@
     <img
       :src="entry.entries[0].url"
       :alt="entry.description"
-      class="w-screen-3/4"
+      class="w-full lg:w-screen-3/4"
     />
   </div>
 </template>

@@ -15,7 +15,7 @@
           <div
             class="w-full flex justify-end md:justify-start md:w-1/2 pl-0 md:pl-16 xl:pl-24"
           >
-            <div class="h-full w-full xl:w-3/4 flex flex-col justify-end">
+            <div class="h-inherit w-full xl:w-3/4 flex flex-col justify-end">
               <img
                 src="../assets/images/icons/quot.png"
                 width="45px"

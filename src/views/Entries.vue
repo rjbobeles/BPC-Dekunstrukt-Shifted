@@ -320,7 +320,7 @@ export default {
               url: require("../assets/images/entries/006_EVANGELISTA/2.jpg"),
             },
           ],
-          template: "P1L1",
+          template: "L1P1",
         },
         {
           id: 7,

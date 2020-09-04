@@ -55,7 +55,7 @@ const routes = [
             return 1;
           case "bagong-taon":
             return 1;
-          case "ID-120":
+          case "id-120":
             return 1;
           case "what-was-what-is":
             return 1;
