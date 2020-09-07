@@ -20,7 +20,7 @@
               <p class="minionpro-regular text-ash">
                 The Official Photography Folio <br />of the students of De La
                 Salle-College<br />
-                of St. Benilde
+                of Saint Benilde
               </p>
             </div>
           </div>

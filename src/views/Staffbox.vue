@@ -91,7 +91,7 @@ export default {
             name: "Beatrice Quirante",
             position: "Gumaganap na Patnugot ng Filipino",
           },
-          { name: "Nina Cudal", position: "Photo Editor" },
+          { name: "Niña Cudal", position: "Photo Editor" },
           { name: "Michael Ambion ", position: "Layout Editor" },
           { name: "Vince Zarate", position: "Digital Media Editor" },
           { name: "Jella Gonzaga", position: "Literary Editor" },

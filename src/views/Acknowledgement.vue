@@ -33,7 +33,7 @@
           </p>
           <p class="mb-8 leading-relaxed">
             We would also like to thank the staffers who poured their time and
-            energy for this folio’s fruition. To the sections of Art + Design
+            energy for this folio’s fruition. To the sections of Art & Design
             and Layout, thank you for your creative ideas and outlines in
             helping make this as beautiful as we envisioned. Thank you as well
             to Ryan and Gel, our awesome Web Developers, who executed our
@@ -53,8 +53,11 @@
           <p class="mb-8 leading-relaxed">
             Most importantly, thank you to all the Benildean students who
             contributed, for sharing your stories and letting us be a part of
-            it. You are the main reason we consider this folio a triumph. We are
-            proud and grateful for your works.
+            it. We would also like to express our utmost gratitude to our
+            partner Benilde organizations, namely: AIESEC in CSB, Computer
+            Business Association (CBA) and Social and Academic Guild for
+            Architecture (SAGA). All of you are the main reason we consider this
+            folio a triumph. We are proud and grateful for your works.
           </p>
 
           <div class="flex flex-row justify-between pt-4 items-center">

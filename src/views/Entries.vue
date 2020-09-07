@@ -193,7 +193,7 @@ export default {
           title: "C. Homecoming",
           author: "Miguel Belen",
           description:
-            "A man, probably a dad working in Manila with a family in Cebu. Coming from a childhood in which my mom did the same thing i wouldn't say my guess if too far fetched. Homecoming is usually celebrated, but maybe not when you're not sure what he's coming home with.",
+            "A man, probably a dad working in Manila with a family in Cebu. Coming from a childhood in which my mom did the same thing I wouldn't say my guess if too far fetched. Homecoming is usually celebrated, but maybe not when you're not sure what he's coming home with.",
           slug: "c-homecoming",
           entries: [
             {
@@ -287,7 +287,7 @@ export default {
           title: '"Para sa Kultura" and "Kamay ni Lola"',
           author: "Jean A. Evangelista",
           description:
-            "A tagbanua tribe member hoping for a better future. The sacrifice of a mother can be seen in their hands",
+            "A Tagbanua tribe member hoping for a better future. The sacrifice of a mother can be seen in their hands",
           slug: "para-sa-kultura",
           entries: [
             {
@@ -730,7 +730,7 @@ export default {
           title: "The Cost of Education",
           author: "Rochellea Giganto Dizon",
           description:
-            "Not every children has access to education during the pandemic. This child who risks his life outside while asking for financial help for the sake of his education, made me realize that it’s a terrible thing how we easily take things for granted while others bear the brunt of everyday.",
+            "Not every children has access to education during the pandemic. This child who risks his life outside while asking for financial help for the sake of his education made me realize that it’s a terrible thing how we easily take things for granted while others bear the brunt of everyday.",
           slug: "cost-of-education",
           entries: [
             {
