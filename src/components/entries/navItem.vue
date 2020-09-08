@@ -72,7 +72,7 @@ export default {
 
 <style scoped lang="scss">
 .showDetails {
-  max-height: 250px;
+  max-height: 300px;
 }
 .hideDetails {
   max-height: 0;
