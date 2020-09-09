@@ -46,14 +46,19 @@
               >
                 <h3
                   class="text-marble chivo-bold text-2xl text-opacity-75 mb-4 sm:mb-8 lg:mb-12 pl-5 sm:pl-8 md:pl-12 lg:pl-16"
+                  :class="{ 'l1-template': currentEntry.template == 'L1' }"
                 >
                   PHOTO ENTRIES
                 </h3>
                 <div
                   id="toc"
                   class="toc relative float-left w-full overflow-y-auto pl-5 sm:pl-8 md:pl-12 lg:pl-16"
+                  :class="{
+                    'l1-template': currentEntry.template == 'L1',
+                    'l2-template': currentEntry.template == 'L2',
+                  }"
                 >
-                  <div>
+                  <div class="mb-48">
                     <navItem
                       v-for="entry in entries"
                       :key="entry.id"
@@ -62,6 +67,7 @@
                       :author="entry.author"
                       :description="entry.description"
                       :slug="entry.slug"
+                      :template="entry.template"
                       :isCurrentItem="entry.id == currentEntry.id"
                       :id="entry.id == currentEntry.id ? 'currentItem' : ''"
                     />
@@ -171,7 +177,12 @@ export default {
       this.isDrawerOpen = false;
     },
     scrollToNavItem() {
-      const itemPos = document.getElementById("currentItem").offsetTop - 100;
+      const template = this.currentEntry.template;
+      let offset = 200;
+      if (template == "L1" || template == "L2") {
+        offset = 150;
+      }
+      const itemPos = document.getElementById("currentItem").offsetTop - offset;
       document.getElementById("toc").scrollTop = itemPos;
     },
   },
@@ -182,6 +193,9 @@ export default {
         this.loadEntry(to.params.title);
       }
     },
+  },
+  updated() {
+    this.scrollToNavItem();
   },
   data() {
     return {
@@ -842,6 +856,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+div.l1-template {
+  max-height: 70% !important;
+}
+div.l2-template {
+  max-height: 65% !important;
+}
 .rotateArrow {
   transform: rotate(180deg);
 }

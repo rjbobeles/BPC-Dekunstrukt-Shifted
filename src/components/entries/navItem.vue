@@ -23,7 +23,7 @@
       >
         <p
           class="minionpro-regular text-marble text-opacity-100 mb-8 xl:w-2/3 pl-3 leading-relaxed mt-6"
-          :class="{ fadeInRight: isCurrentItem }"
+          :class="{ fadeInRight: isCurrentItem, l1template: template == 'L1' }"
         >
           {{ description }}
         </p>
@@ -66,11 +66,19 @@ export default {
       type: String,
       default: null,
     },
+    template: {
+      type: String,
+      default: null,
+    },
   },
 };
 </script>
 
 <style scoped lang="scss">
+p.l1template {
+  margin-top: 1.15rem;
+  margin-bottom: 1.3rem;
+}
 .showDetails {
   max-height: 300px;
 }
