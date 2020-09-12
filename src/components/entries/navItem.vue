@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col sm:flex-row mb-6 md:mb-8 lg:mb-12">
+  <div class="flex flex-col sm:flex-row mb-6 md:mb-12">
     <div
       class="minionpro-regular text-marble pt-2"
       :class="[isCurrentItem ? 'text-opacity-75' : 'text-opacity-50']"

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gritty flex flex-col items-center lg:pt-10">
+  <div class="bg-gritty flex flex-col items-center">
     <img
       :src="entry.entries[0].url"
       :alt="entry.description"

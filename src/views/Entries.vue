@@ -105,6 +105,21 @@
             </div>
           </div>
         </vue-drawer-layout>
+        <div class="bg-gritty w-full pt-24 pb-16 px-5">
+          <div class="mx-auto w-full sm:w-4/5 md:w-2/3 lg:w-1/2">
+            <h1
+              class="chivo-bold text-mango text-4xl uppercase mb-5 leading-none"
+            >
+              {{ currentEntry.title }}
+            </h1>
+            <h5 class="text-ash minionpro-regular uppercase text-lg mb-5">
+              BY {{ currentEntry.author }}
+            </h5>
+            <p class="minionpro-regular text-ash text-lg">
+              {{ currentEntry.description }}
+            </p>
+          </div>
+        </div>
         <L1
           v-if="this.currentEntry.template == 'L1'"
           :entry="this.currentEntry"
@@ -853,12 +868,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-div.l1-template {
-  max-height: 70% !important;
-}
-div.l2-template {
-  max-height: 65% !important;
-}
 .rotateArrow {
   transform: rotate(180deg);
 }
@@ -866,12 +875,14 @@ div.l2-template {
   background-image: linear-gradient(
     to right,
     rgb(0, 0, 0),
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.5),
+    rgb(0, 0, 0),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.3),
     rgba(0, 0, 0, 0)
   );
   .toc {
-    max-height: 60%;
+    height: 80%;
+    max-height: 75vh;
     direction: rtl;
     scroll-behavior: smooth;
   }
@@ -887,10 +898,29 @@ div.l2-template {
     border-radius: 20px;
   }
 }
-
-@media only screen and (max-width: 1023px) {
-  .drawer .toc {
-    max-height: 75%;
+@media only screen and (max-width: 1536px) {
+  .drawer {
+    background-image: linear-gradient(
+      to right,
+      rgb(0, 0, 0),
+      rgb(0, 0, 0),
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0)
+    );
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .drawer {
+    background-image: linear-gradient(
+      to right,
+      rgb(0, 0, 0),
+      rgb(0, 0, 0),
+      rgb(0, 0, 0),
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0)
+    );
   }
 }
 @media only screen and (max-width: 639px) {
@@ -899,6 +929,17 @@ div.l2-template {
     overflow: hidden !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
+  }
+  .drawer {
+    background-image: linear-gradient(
+      to right,
+      rgb(0, 0, 0),
+      rgb(0, 0, 0),
+      rgb(0, 0, 0),
+      rgb(0, 0, 0),
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0)
+    );
   }
 }
 </style>
