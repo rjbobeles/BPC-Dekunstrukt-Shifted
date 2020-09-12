@@ -17,23 +17,6 @@
           {{ title }}
         </h3>
       </router-link>
-      <div
-        class="overflow-hidden transition-all duration-700 ease-in-out"
-        :class="[isCurrentItem ? 'showDetails' : 'hideDetails']"
-      >
-        <p
-          class="minionpro-regular text-marble text-opacity-100 mb-8 xl:w-2/3 pl-3 leading-relaxed mt-6"
-          :class="{ fadeInRight: isCurrentItem, l1template: template == 'L1' }"
-        >
-          {{ description }}
-        </p>
-        <p
-          class="minionpro-regular text-marble text-opacity-100 mb-5 uppercase text-xs tracking-widest pl-3"
-          :class="{ fadeIn: isCurrentItem }"
-        >
-          By {{ author }}
-        </p>
-      </div>
     </div>
   </div>
 </template>
@@ -50,10 +33,6 @@ export default {
       type: Number,
       default: 0,
     },
-    description: {
-      type: String,
-      default: null,
-    },
     slug: {
       type: String,
       default: null,
@@ -62,63 +41,8 @@ export default {
       type: Boolean,
       default: false,
     },
-    author: {
-      type: String,
-      default: null,
-    },
-    template: {
-      type: String,
-      default: null,
-    },
   },
 };
 </script>
 
-<style scoped lang="scss">
-p.l1template {
-  margin-top: 1.15rem;
-  margin-bottom: 1.3rem;
-}
-.showDetails {
-  max-height: 300px;
-}
-.hideDetails {
-  max-height: 0;
-}
-
-.fadeInRight {
-  animation: fadeInRight 0.5s ease;
-  animation-fill-mode: both;
-}
-
-.fadeIn {
-  animation: fadeIn 0.5s ease 0.4s;
-  animation-fill-mode: both;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translatex(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translatex(0px);
-  }
-}
-
-@media only screen and (max-width: 639px) {
-  .showDetails {
-    max-height: 360px;
-  }
-}
-</style>
+<style scoped lang="scss"></style>

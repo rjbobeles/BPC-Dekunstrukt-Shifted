@@ -64,10 +64,7 @@
                       :key="entry.id"
                       :idno="entry.id"
                       :title="entry.title"
-                      :author="entry.author"
-                      :description="entry.description"
                       :slug="entry.slug"
-                      :template="entry.template"
                       :isCurrentItem="entry.id == currentEntry.id"
                       :id="entry.id == currentEntry.id ? 'currentItem' : ''"
                     />
@@ -178,9 +175,9 @@ export default {
     },
     scrollToNavItem() {
       const template = this.currentEntry.template;
-      let offset = 200;
+      let offset = 150;
       if (template == "L1" || template == "L2") {
-        offset = 150;
+        offset = 100;
       }
       const itemPos = document.getElementById("currentItem").offsetTop - offset;
       document.getElementById("toc").scrollTop = itemPos;
