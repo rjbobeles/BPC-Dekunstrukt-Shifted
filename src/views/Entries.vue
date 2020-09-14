@@ -219,7 +219,7 @@ export default {
           title: "C. Homecoming",
           author: "Miguel Belen",
           description:
-            "A man, probably a dad working in Manila with a family in Cebu. Coming from a childhood in which my mom did the same thing I wouldn't say my guess if too far fetched. Homecoming is usually celebrated, but maybe not when you're not sure what he's coming home with.",
+            "A man, probably a dad working in Manila with a family in Cebu. Coming from a childhood in which my mom did the same thing, I wouldn't say my guess is too far fetched. Homecoming is usually celebrated, but maybe not when you're not sure what he's coming home with.",
           slug: "c-homecoming",
           entries: [
             {
@@ -253,7 +253,7 @@ export default {
         },
         {
           id: 3,
-          title: "Pila",
+          title: "PILA",
           author: "Alleison Llenes Dimatulac",
           description:
             "Dati rati’y sa counter lang pila. Ngayon, abot labas na ang hantayan.",
@@ -556,7 +556,7 @@ export default {
           title: "The Life Before The Pandemic",
           author: "Edison C. Lin",
           description:
-            "When everything was still normal where face masks and physical distancing were not yet required.",
+            "When everything was still normal: when face masks and physical distancing were not yet required.",
           slug: "before-the-pandemic",
           entries: [
             {
@@ -700,7 +700,7 @@ export default {
           title: "Aliwan",
           author: "Lance Mitchell B. Sy",
           description:
-            "The alarming threat posed by the COVID-19 virus have caused the people to start isolating themselves. With schools halting operations, children lack of access to their friends and the outside world. Physical distancing as protocol. Will it ever be the same as it was again?",
+            "The alarming threat posed by the COVID-19 pandemic has caused the people to start isolating themselves. With physical distancing as protocol, schools have halted face-to-face operations, leaving students without the access to be with friends and see the outside world. Will it ever be the same as it was again?",
           slug: "aliwan",
           entries: [
             {

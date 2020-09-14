@@ -143,7 +143,7 @@ export default {
         },
         acknowledgements: {
           number: "05",
-          title: "Acknowledgements",
+          title: "Acknowledgments",
           subtitle: "Thank You",
           slug: "acknowledgement",
         },

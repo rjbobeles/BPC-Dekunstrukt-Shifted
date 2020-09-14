@@ -88,7 +88,7 @@
               />
               <h3 class="chivo-bold text-mango text-2xl">NIÑA CUDAL</h3>
               <p class="minionpro-regular text-ash text-xs tracking-widest">
-                PHOTO EDITOR, THE BENILDEAN PRESS CORPS
+                PHOTO EDITOR, BENILDEAN PRESS CORPS
               </p>
             </div>
           </div>

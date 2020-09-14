@@ -17,7 +17,7 @@
           of the students of De La Salle-College <br />
           of Saint Benilde. <br />
           <br />
-          The Benildean Press Corps © 2020. <br />
+          Benildean Press Corps © 2020. <br />
           All rights reserved.
         </div>
         <div class="w-full sm:w-1/2 text-sm">
