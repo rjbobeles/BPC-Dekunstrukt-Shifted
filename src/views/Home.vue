@@ -81,14 +81,19 @@
         <div
           class="capture md:w-1/2 mb-12 md:mb-0 pl-0 pl-8 pr-8 md:pr-0 lg:pl-16 md:pt-8 lg:pt-32 flex order-1 md:order-2 lax"
         >
-          <div class="w-full md:w-5/6 xl:w-3/5 h-2/5 flex flex-col">
+          <div
+            id="capture-the-change"
+            class="w-full md:w-5/6 xl:w-3/5 h-2/5 flex flex-col"
+          >
             <h1
               class="chivo-bold text-mango text-5xl sm:text-6xl md:text-5xl lg:text-6xl leading-none mb-8"
             >
               Capture <br />
               the Change
             </h1>
-            <p class="minionpro-regular text-gritty mb-16 md:mb-12 lg:mb-32">
+            <p
+              class="caption minionpro-regular text-gritty mb-16 md:mb-12 lg:mb-32"
+            >
               For this year's photography folio,
               <span class="minionpro-bold-italic">Dekunstrukt: Shifted</span>,
               stories are told even without words. Each photograph outlines an
@@ -149,7 +154,14 @@ export default {
 .arrow-down {
   bottom: 125px;
 }
-
+@media only screen and (min-width: 1280px) and (max-width: 1360px) {
+  #capture-the-change {
+    width: 70%;
+    .caption {
+      margin-bottom: 5rem;
+    }
+  }
+}
 @media only screen and (max-width: 1279px) {
   .h-2\/5 {
     height: 60%;
