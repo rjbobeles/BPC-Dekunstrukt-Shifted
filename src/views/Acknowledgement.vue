@@ -11,7 +11,7 @@
           <h1
             class="chivo-bold text-mango bg-gritty px-3 py-2 inline-block text-xl mb-12"
           >
-            ACKNOWLEDGEMENTS
+            ACKNOWLEDGMENTS
           </h1>
           <p class="mb-8 leading-relaxed">
             The Benildean Press Corps would like to thank everyone who turned
